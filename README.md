@@ -10,8 +10,8 @@
 Whats Nearby is a small extension that adds geolocation (HTML5) detection information
 to templates in order for [`#ask`][smw] distance queries to generate adaptive content.
 
-Privacy: This extension makes actively use of the HTML5 geolocation feature (if the
-option is enabled).
+Privacy: This extension makes actively use of the HTML5 geolocation feature in case the
+`nolocation` option is not used.
 
 ## Requirements
 
@@ -62,23 +62,43 @@ to be displayed for a geolocation.
 - querytemplate: specifies the template that contains the actual `#ask` query and any
   other condition one wishes to display (to allow for a selection of different templates
   separate them with a comma as in Sightseeing spots, Libraries)
-- maps: in case the template contains a map query then we routing it through
-- detectLocation: whether HTML5 [geolocation](https://dev.w3.org/geo/api-/spec-source.html) should be used or not (opt-out)
-- watchLocation: monitor the location or location changes (opt-in)
+- detectlocation: whether HTML5 [geolocation](https://dev.w3.org/geo/api-/spec-source.html) should be used or not (opt-out)
+- watchlocation: monitor the location or location changes (opt-in)
 - coordinates: can be set as starting parameters in case geolocation doesn't work or is disabled
 - class: a simple css class to manipulate the output display
 - controls: slider or button
 - radius: the expected starting radius (e.g. 200m, 4km)
 - interval: to describe the internal a search should be continued
 - max: defines the maximum limit or radius to be permitted for selection
-- localCache: defines the time in seconds (with the default of 300) with which
+- localcache: defines the time in seconds (with the default of 300) with which
   results from the back-end are stored using the local browser
 
-Any other parameter not listed above will be made available to a template as-is.
+The `nolocation` parameter will disable the `geolocation` feature completely for
+a select query. In combination with non-maps related query formats (`table`,
+`embedded`), `#nearby` can equally create a dynamic result display for those
+formats that do not require additional JavaScript to be loaded.
 
-[semantic.lib.example.tmpl.md](docs/semantic.lib.example.tmpl.md) contains an
-example template using [`#ask` queries][smw] to find local libraries based on the
-position determined by `#nearby`.
+```
+{{#nearby: [[Has text::~Lorem ipsum]]
+ |?Has text
+ |limit=5
+ |max=100
+ |interval=10
+ |nolocation=true
+ |format=table
+ |localcache=no
+ |controls=slider
+ |querytemplate=semantic.query.tmpl
+}}
+```
+
+Parameters not listed will be made available to a `querytemplate` as-is.
+
+- [example.semantic.distance.maps.tmpl](docs/example.semantic.distance.maps.tmpl.md) contains an
+  example template using [`#ask` queries][smw] to find local libraries based on the
+  position determined by `#nearby`.
+- [example.semantic.query.tmpl.md](docs/example.semantic.query.tmpl.md) a simple `#ask` replacement
+  query to create dynamic results
 
 ## Contribution and support
 

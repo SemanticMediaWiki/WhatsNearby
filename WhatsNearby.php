@@ -4,7 +4,7 @@ use WNBY\HookRegistry;
 
 /**
  * @see https://github.com/SemanticMediaWiki/WhatsNearby/
- * @link https://www.mediawiki.org/wiki/Extension:WhatsNearby
+ * @link https://www.semantic-mediawiki.org/wiki/Extension:WhatsNearby
  *
  * @defgroup wnby WhatsNearby
  */
@@ -17,7 +17,7 @@ if ( version_compare( $GLOBALS[ 'wgVersion' ], '1.23', 'lt' ) ) {
 }
 
 // Do not initialize more than once.
-if ( defined( 'wnby_VERSION' ) ) {
+if ( defined( 'WNBY_VERSION' ) ) {
 	return 1;
 }
 
@@ -32,7 +32,7 @@ call_user_func( function() {
 		'path' => __FILE__,
 		'name' => 'Whats Nearby',
 		'author' =>array( 'mwjames' ),
-		'url' => 'https://www.semantic-mediawiki.org/wiki/Extension:Whats_Nearby',
+		'url' => 'https://www.semantic-mediawiki.org/wiki/Extension:WhatsNearby',
 		'description' => 'wnby-desc',
 		'version'  => WNBY_VERSION,
 		'license-name'   => 'GPL-2.0+',
@@ -42,12 +42,9 @@ call_user_func( function() {
 	$GLOBALS['wgMessagesDirs']['whats-nearby'] = __DIR__ . '/i18n';
 	$GLOBALS['wgExtensionMessagesFiles']['whats-nearby-magic'] = __DIR__ . '/i18n/WhatsNearby.magic.php';
 
-	// Register resource files
-	$extensionPathParts = explode( DIRECTORY_SEPARATOR . 'extensions' . DIRECTORY_SEPARATOR , __DIR__, 2 );
-
 	$GLOBALS['wgResourceModules']['ext.jquery.rangeslider'] = array(
 		'localBasePath' => __DIR__ ,
-		'remoteExtPath' => end( $extensionPathParts ),
+		'remoteExtPath' => 'WhatsNearby',
 		'position' => 'bottom',
 		'styles' => array(
 			'res/jquery.rangeSlider/ion.rangeSlider.css',
@@ -65,7 +62,7 @@ call_user_func( function() {
 
 	$GLOBALS['wgResourceModules']['ext.blobstore'] = array(
 		'localBasePath' => __DIR__ ,
-		'remoteExtPath' => end( $extensionPathParts ),
+		'remoteExtPath' => 'WhatsNearby',
 		'position' => 'bottom',
 		'scripts' => array(
 			'res/ext.blobstore.js'
@@ -78,7 +75,7 @@ call_user_func( function() {
 
 	$GLOBALS['wgResourceModules']['ext.whats.nearby'] = array(
 		'localBasePath' => __DIR__ ,
-		'remoteExtPath' => end( $extensionPathParts ),
+		'remoteExtPath' => 'WhatsNearby',
 		'position' => 'bottom',
 		'styles' => array( 'res/ext.whats.nearby.css' ),
 		'scripts' => array( 'res/ext.whats.nearby.js' ),
