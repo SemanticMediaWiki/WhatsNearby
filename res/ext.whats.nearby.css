@@ -1,0 +1,95 @@
+.whats-nearby #limit-form, .whats-nearby-nolocation #limit-form {
+    padding: 2px 0 0 0;
+    margin: 0px;
+}
+
+.whats-nearby input.limit-input, .whats-nearby-nolocation input.limit-input {
+    width: 40px;
+    height: 19px;
+    text-align: center;
+}
+
+.whats-nearby input.limit-plus, .whats-nearby input.limit-minus {
+	width:25px;
+	height:25px;
+}
+
+.whats-nearby input.limit-input {
+	color: #aaa;
+}
+
+.whats-nearby .loading-image {
+	text-align: center;
+}
+
+.whats-nearby .overlay {
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    z-index: 10000;
+    cursor: wait;
+}
+
+.whats-nearby #controls {
+   margin-bottom:10px;
+}
+
+.whats-nearby #selection {
+   margin-top:10px;
+   margin-bottom:5px;
+}
+
+.whats-nearby #selection select {
+   width:100%;
+}
+
+.whats-nearby .ui-slider-horizontal .ui-state-default {
+    margin-left: -1.5em;
+}
+
+.whats-nearby .ui-slider .ui-slider-handle {
+    width:3em;
+    left:-1.5em;
+    text-decoration:none;
+    text-align:center;
+}
+
+.whats-nearby .irs-from, .whats-nearby .irs-to, .whats-nearby .irs-single {
+    background: rgba(0,0,0,0.3);
+}
+
+.whats-nearby .irs-from:after, .whats-nearby .irs-to:after, .whats-nearby .irs-single:after {
+    border-top-color: rgba(0,0,0,0.3);
+}
+
+.whats-nearby select {
+    border-radius: 3px;
+    padding: 2px;
+    border-color: #e1e4e9;
+    width: 100%;
+    /* text-indent: -2px; */
+    background-color: #e1e4e9;
+    background-repeat: no-repeat;
+    background-position: right 10px top 15px;
+    background-size: 16px 16px;
+    color: white;
+    padding: 5px;
+    /* width: auto; */
+    font-family: arial,tahoma;
+    font-size: 14px;
+    /* font-weight: bold; */
+    color: #999;
+    text-align: center;
+    /* text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); */
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    -webkit-transition: 0.3s ease all;
+    -moz-transition: 0.3s ease all;
+    -ms-transition: 0.3s ease all;
+    -o-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+}

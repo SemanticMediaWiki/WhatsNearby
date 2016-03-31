@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"mwjames"
+		]
+	},
+	"wnby-desc": "A simple extension to provide geolocation information to templates.",
+	"wnby-loading": "Loading ...",
+	"wnby-geolocation-disabled": "Geolocation detection was disabled by the user.",
+	"wnby-geolocation-unsupported": "Geolocation detection is not supported by this browser.",
+	"wnby-geolocation-unknown-error": "An unknown error occurred.",
+	"wnby-geolocation-timeout-error": "The request to get user location timed out.",
+	"wnby-geolocation-position-unavailable": "Geolocation information is unavailable.",
+	"wnby-geolocation-permission-denied": "User denied the request for Geolocation.",
+	"wnby-no-fallback-location": "No fallback location is available.",
+	"wnby-default-fallback-location": "Using the default coordinates as fallback.",
+	"wnby-invalid-coordinates-format" : "The default coordinates format is expecting a latitude, longitude.",
+	"wnby-localcache-use": "Data were retrieved from the local browser cache.",
+	"wnby-template-parameter-missing": "A required template parameter is missing."
+}

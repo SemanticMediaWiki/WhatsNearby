@@ -1,0 +1,44 @@
+{
+	"name": "mediawiki/whats-nearby",
+	"type": "mediawiki-extension",
+	"description": "Provide geolocation information to templates",
+	"keywords": [
+		"MediaWiki",
+		"Geolocation",
+		"Maps",
+		"semantic queries",
+		"semantic templates"
+	],
+	"homepage": "https://www.mediawiki.org/wiki/Extension:Whats_Nearby",
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "mwjames",
+			"role": "Creator"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+		"composer/installers": "1.*,>=1.0.1",
+		"mediawiki/maps": "@dev"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "1.x-dev"
+		}
+	},
+	"autoload": {
+		"files" : [
+			"WhatsNearby.php"
+		],
+		"psr-4": {
+			"WNBY\\": "src/"
+		}
+	},
+	"config": {
+		"process-timeout": 0
+	},
+	"scripts":{
+		"phpunit": "php ../../tests/phpunit/phpunit.php -c phpunit.xml.dist"
+	}
+}
