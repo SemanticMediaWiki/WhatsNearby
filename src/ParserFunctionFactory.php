@@ -17,16 +17,16 @@ class ParserFunctionFactory {
 	 */
 	public function newNearbyParserFunctionDefinition() {
 
-		$nearByParserFunctionDefinition = function( $parser ) {
+		$nearbyParserFunctionDefinition = function( $parser ) {
 
-			$nearByParserFunction = new NearByParserFunction(
+			$nearbyParserFunction = new NearbyParserFunction(
 				$parser
 			);
 
-			return $nearByParserFunction->parse( func_get_args() );
+			return $nearbyParserFunction->parse( func_get_args() );
 		};
 
-		return array( 'nearby', $nearByParserFunctionDefinition, 0 );
+		return array( 'nearby', $nearbyParserFunctionDefinition, 0 );
 	}
 
 }

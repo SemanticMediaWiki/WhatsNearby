@@ -1,4 +1,4 @@
-# Whats NearBy
+# Whats Nearby
 
 [![Build Status](https://secure.travis-ci.org/SemanticMediaWiki/WhatsNearby.svg?branch=master)](http://travis-ci.org/SemanticMediaWiki/WhatsNearby)
 [![Code Coverage](https://scrutinizer-ci.com/g/SemanticMediaWiki/WhatsNearby/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/SemanticMediaWiki/WhatsNearby/?branch=master)
