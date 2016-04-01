@@ -76,6 +76,9 @@
 			this.template = this.parameters.querytemplate;
 		}
 
+		this.latitude = '';
+		this.longitude = '';
+
 		this.hasDetectedGeolocation = false;
 	};
 
@@ -86,7 +89,7 @@
 	 *
 	 * @since  1.0
 	 */
-	nearBy.prototype.searchNearBy = function() {
+	nearBy.prototype.searchNearby = function() {
 
 		var self = this;
 
@@ -160,6 +163,38 @@
 	};
 
 	/**
+	 * Build the template code
+	 *
+	 * @since  1.0
+	 */
+	nearBy.prototype.buildTemplateCode = function() {
+
+		var self = this,
+			parameters = '';
+
+		$.each( self.parameters , function( key, value ) {
+			parameters = parameters + '|' + key + '=' + value;
+		} );
+
+		// Replace internal @@placeholder (cannot use {{{radius}}} as those are
+		// replaced by the MW parser)
+		parameters = parameters.replace( '@@radius', self.limit );
+		parameters = parameters.replace( '@@unit', self.unit );
+		parameters = parameters.replace( '@@latitude', self.latitude );
+		parameters = parameters.replace( '@@longitude', self.longitude );
+
+		return '{{' + self.template + parameters +
+			'|latitude=' + self.latitude +
+			'|longitude=' + self.longitude +
+			'|radius=' + self.limit  +
+			'|limit=' + self.limit  +
+			'|unit=' + self.unit +
+			'|maps=' + ( self.parameters.hasOwnProperty( 'maps' ) ? self.parameters.maps : '' ) +
+			'|hasDetectedGeolocation=' + self.hasDetectedGeolocation +
+		'}}';
+	}
+
+	/**
 	 * Reload (re-render) maps or other objects that rely on JavaScript to be
 	 * executed after a fresh parse.
 	 *
@@ -205,10 +240,6 @@
 			template = '',
 			hash = '';
 
-		$.each( self.parameters , function( key, value ) {
-			parameters = parameters + '|' + key + '=' + value;
-		} );
-
 		// No template -> no parse
 		if ( self.template === '' || self.template === undefined ) {
 			self.container.find( '#output' ).empty();
@@ -219,14 +250,7 @@
 			return self;
 		};
 
-		template = '{{' + self.template + parameters +
-			'|latitude=' + self.latitude +
-			'|longitude=' + self.longitude +
-			'|radius=' + self.limit  +
-			'|limit=' + self.limit  +
-			'|unit=' + self.unit +
-			'|maps=' + ( self.parameters.hasOwnProperty( 'maps' ) ? self.parameters.maps : '' ) +
-			'|hasDetectedGeolocation=' + self.hasDetectedGeolocation + '}}';
+		template = self.buildTemplateCode();
 
 		hash = md5( template + self.VERSION );
 		self.container.find( '#output' ).addClass( 'overlay' );
@@ -405,9 +429,9 @@
 			);
 
 			if ( whatsNearBy.parameters.hasOwnProperty( 'nolocation' ) ) {
-				whatsNearBy.parse().searchNearBy();
+				whatsNearBy.parse().searchNearby();
 			} else {
-				whatsNearBy.detectGeolocation().searchNearBy();
+				whatsNearBy.detectGeolocation().searchNearby();
 			}
 		} );
 
