@@ -3,9 +3,6 @@ sudo: false
 
 language: php
 
-env:
-  - THENEEDFORTHIS=FAIL
-
 matrix:
   fast_finish: true
   include:
@@ -15,10 +12,8 @@ matrix:
       php: 5.4
     - env: DB=mysql; MW=1.25.1
       php: hhvm
-  exclude:
-    - env: THENEEDFORTHIS=FAIL
-  allow_failures:
-    - env: THENEEDFORTHIS=FAIL
+    - env: DB=mysql; MW=master
+      php: 7
 
 install:
   - bash ./tests/travis/install-mediawiki.sh
