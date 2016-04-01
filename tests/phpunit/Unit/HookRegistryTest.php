@@ -45,6 +45,7 @@ class HookRegistryTest extends \PHPUnit_Framework_TestCase {
 			->will( $this->returnValue( $parserOutput ) );
 
 		$instance = new HookRegistry();
+		$instance->deregister();
 		$instance->register();
 
 		$this->doTestParserFirstCallInit( $instance, $parser );

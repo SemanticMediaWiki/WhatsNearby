@@ -7,6 +7,8 @@
  |{{{pr-5}}}
  |{{{pr-6}}}
  |{{{pr-7}}}
- |limit={{{limit}}}
+ |limit={{{limit|5}}}
+ |sort={{{sort|}}}
+ |order={{{order|}}}
  |format={{{format}}}
 }}</includeonly>

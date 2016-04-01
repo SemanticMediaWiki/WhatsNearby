@@ -9,12 +9,12 @@
 		"semantic queries",
 		"semantic templates"
 	],
-	"homepage": "https://www.mediawiki.org/wiki/Extension:Whats_Nearby",
+	"homepage": "https://www.semantic-mediawiki.org/wiki/Extension:WhatsNearby",
 	"license": "GPL-2.0+",
 	"authors": [
 		{
 			"name": "mwjames",
-			"role": "Creator"
+			"role": "Developer"
 		}
 	],
 	"require": {
