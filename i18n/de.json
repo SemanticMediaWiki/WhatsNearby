@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"mwjames", "krabina"
+		]
+	},
+	"wnby-desc": "Eine einfache Erweiterung, um Informationen über den aktuellen Standort für Vorlagen bereitszustellen.",
+	"wnby-loading": "lädt ...",
+	"wnby-geolocation-disabled": "Die Standorterkennung wurde vom Benutzer deaktiviert.",
+	"wnby-geolocation-unsupported": "Die Standorterkennung wird von diesem Browser nicht unterstützt.",
+	"wnby-geolocation-unknown-error": "Ein unbekannter Fehler ist aufgetreten.",
+	"wnby-geolocation-timeout-error": "Die Anfrage zum aktuellen Standorts hat zu lange benötigt.",
+	"wnby-geolocation-position-unavailable": "Der aktuelle Standort kann nicht ermittelt werden.",
+	"wnby-geolocation-permission-denied": "Der Benutzer hat die Anfrage nach dem aktuellen Standort abgelehnt.",
+	"wnby-no-fallback-location": "Es ist kein Ersatzstandort verfügbar.",
+	"wnby-default-fallback-location": "Voreingestellte Koordinaten werden als Ersatzstandort verwendet.",
+	"wnby-invalid-coordinates-format" : "Das Format für Koordinaten muss in der Form Breite, Höhe vorliegen.",
+	"wnby-localcache-use": "Daten wurden aus dem lokalen Browser-Cache abgerufen.",
+	"wnby-template-parameter-missing": "Ein benötigeter Parameter für die Vorlage fehlt."
+}
