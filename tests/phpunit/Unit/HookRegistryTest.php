@@ -50,6 +50,7 @@ class HookRegistryTest extends \PHPUnit_Framework_TestCase {
 
 		$this->doTestParserFirstCallInit( $instance, $parser );
 		$this->doTestResourceLoaderGetConfigVars( $instance );
+		$this->doTestOutputPageParserOutput( $instance );
 	}
 
 	public function doTestParserFirstCallInit( $instance, $parser ) {
@@ -79,6 +80,32 @@ class HookRegistryTest extends \PHPUnit_Framework_TestCase {
 		$this->assertThatHookIsExcutable(
 			$instance->getHandlerFor( $handler ),
 			array( &$vars )
+		);
+	}
+
+	public function doTestOutputPageParserOutput( $instance ) {
+
+		$parserOutput = $this->getMockBuilder( '\ParserOutput' )
+			->disableOriginalConstructor()
+			->getMock();
+
+		$parserOutput->expects( $this->any() )
+			->method( 'getExtensionData' )
+			->will( $this->returnValue( true ) );
+
+		$outputPage = $this->getMockBuilder( '\OutputPage' )
+			->disableOriginalConstructor()
+			->getMock();
+
+		$handler = 'OutputPageParserOutput';
+
+		$this->assertTrue(
+			$instance->isRegistered( $handler )
+		);
+
+		$this->assertThatHookIsExcutable(
+			$instance->getHandlerFor( $handler ),
+			array( $outputPage, $parserOutput )
 		);
 	}
 

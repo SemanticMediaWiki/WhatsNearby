@@ -47,11 +47,27 @@ class NearbyParserFunction {
 		}
 
 		$this->addMapServicesToOutput( $parameters );
+		$geoip = true;
+
+		if ( isset( $parameters['nolocation'] ) ||
+			( isset( $parameters['detectlocation'] ) && !$parameters['detectlocation'] ) ) {
+			$geoip = false;
+		}
+
+		// Is to signal the OutputPageParserOutput hook
+		$this->parser->getOutput()->setExtensionData(
+			'wnby-geoip',
+			$geoip
+		);
 
 		$this->parser->getOutput()->addModules(
 			'ext.whats.nearby'
 		);
 
+		return $this->getHtmlFor( $class, $parameters );
+	}
+
+	private function getHtmlFor( $class, $parameters ) {
 		return Html::rawElement(
 			'div',
 			array(

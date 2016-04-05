@@ -42,30 +42,24 @@ call_user_func( function() {
 	$GLOBALS['wgMessagesDirs']['whats-nearby'] = __DIR__ . '/i18n';
 	$GLOBALS['wgExtensionMessagesFiles']['whats-nearby-magic'] = __DIR__ . '/i18n/WhatsNearby.magic.php';
 
-	$GLOBALS['wgResourceModules']['ext.jquery.rangeslider'] = array(
-		'localBasePath' => __DIR__ ,
-		'remoteExtPath' => 'WhatsNearby',
-		'position' => 'bottom',
-		'styles' => array(
-			'res/jquery.rangeSlider/ion.rangeSlider.css',
-			'res/jquery.rangeSlider/ion.rangeSlider.skinFlat.css'
-//			'res/jquery.rangeSlider/ion.rangeSlider.skinModern.css'
-		),
-		'scripts' => array(
-			'res/jquery.rangeSlider/ion.rangeSlider.js'
-		),
-		'targets' => array(
-			'mobile',
-			'desktop'
-		)
-	);
+	/**
+	 * Specifies whether an external service should be used
+	 * to help with resolving a Geolocation.
+	 *
+	 * If `wnbyExternalGeoIpService` is set true then
+	 * https://meta.wikimedia.org/geoiplookup is being used.
+	 *
+	 * `wnbyExternalGeoIpService` can also hold an https service
+	 * provider.
+	 */
+	$GLOBALS['wnbyExternalGeoIpService'] = true;
 
-	$GLOBALS['wgResourceModules']['ext.blobstore'] = array(
+	$GLOBALS['wgResourceModules']['ext.whats.nearby.geoip'] = array(
 		'localBasePath' => __DIR__ ,
 		'remoteExtPath' => 'WhatsNearby',
 		'position' => 'bottom',
 		'scripts' => array(
-			'res/ext.blobstore.js'
+			'res/ext.whats.nearby.geoip.js'
 		),
 		'targets' => array(
 			'mobile',
@@ -83,9 +77,10 @@ call_user_func( function() {
 			'mediawiki.api',
 			'mediawiki.api.parse',
 			'ext.maps.services',
-			'ext.jquery.rangeslider',
-			'ext.jquery.md5',
-			'ext.blobstore'
+			'onoi.rangeslider',
+			'onoi.blockUI',
+			'onoi.md5',
+			'onoi.blobstore'
 		),
 		'messages' => array(
 			'wnby-geolocation-disabled',
@@ -95,10 +90,12 @@ call_user_func( function() {
 			'wnby-geolocation-position-unavailable',
 			'wnby-geolocation-permission-denied',
 			'wnby-no-fallback-location',
+			'wnby-geolocation-geoip-fallback',
 			'wnby-default-fallback-location',
 			'wnby-invalid-coordinates-format',
 			'wnby-localcache-use',
-			'wnby-template-parameter-missing'
+			'wnby-template-parameter-missing',
+			'wnby-loading'
 		),
 		'targets' => array(
 			'mobile',

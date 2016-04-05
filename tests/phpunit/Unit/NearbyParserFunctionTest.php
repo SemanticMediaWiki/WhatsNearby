@@ -129,4 +129,34 @@ class NearbyParserFunctionTest extends \PHPUnit_Framework_TestCase {
 		);
 	}
 
+	public function testParseWithNolocation() {
+
+		$parserOutput = $this->getMockBuilder( '\ParserOutput' )
+			->disableOriginalConstructor()
+			->getMock();
+
+		$parserOutput->expects( $this->once() )
+			->method( 'setExtensionData' )
+			->with(
+				$this->equalTo( 'wnby-geoip' ),
+				$this->equalTo( false ) );
+
+		$parser = $this->getMockBuilder( '\Parser' )
+			->disableOriginalConstructor()
+			->getMock();
+
+		$parser->expects( $this->any() )
+			->method( 'getOutput' )
+			->will( $this->returnValue( $parserOutput ) );
+
+		$instance = new NearbyParserFunction(
+			$parser
+		);
+
+		$this->assertContains(
+			'<div class="whats-nearby" data-parameters="{&quot;foo&quot;:&quot;bar&quot;,&quot;nolocation&quot;:&quot;true&quot;}">',
+			$instance->parse( array( 'foo=bar', 'nolocation=true' ) )
+		);
+	}
+
 }
