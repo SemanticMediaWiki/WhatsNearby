@@ -15,6 +15,6 @@ $magicWords['en'] = array(
 /**
  * German (Deutsch)
  */
-$magicWords['en'] = array(
+$magicWords['de'] = array(
         'nearby' => array( 0, 'indernähe', 'in_der_nähe' )
 );
