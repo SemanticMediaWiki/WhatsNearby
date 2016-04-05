@@ -5,5 +5,17 @@
 			"Kghbln"
 		]
 	},
-	"wnby-desc": "{{desc|name=Whats Nearby|url=https://semantic-mediawiki.org/wiki/Extension:Whats_Nearby}}"
+	"wnby-desc": "{{desc|name=Whats Nearby|url=https://www.semantic-mediawiki.org/wiki/Extension:Whats_Nearby}}",
+	"wnby-loading": "This is an informatory message.",
+	"wnby-geolocation-disabled": "This is an informatory message.",
+	"wnby-geolocation-unsupported": "This is an informatory message.",
+	"wnby-geolocation-unknown-error": "This is an error message.",
+	"wnby-geolocation-timeout-error": "This is an error message.",
+	"wnby-geolocation-position-unavailable": "This is an informatory message.",
+	"wnby-geolocation-permission-denied": "This is an informatory message.",
+	"wnby-no-fallback-location": "This is an informatory message.\n\nFallback = Location shown when no geoposition was detected.",
+	"wnby-default-fallback-location": "This is an informatory message.\n\nFallback = Location shown when no geoposition was detected.",
+	"wnby-invalid-coordinates-format" : "This is an error message.",
+	"wnby-localcache-use": "This is an informatory message.",
+	"wnby-template-parameter-missing": "This is an error message."
 }
