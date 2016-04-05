@@ -4,7 +4,7 @@
 			"mwjames"
 		]
 	},
-	"wnby-desc": "A simple extension to provide geolocation information to templates.",
+	"wnby-desc": "Provides geolocation detection information to templates",
 	"wnby-loading": "Loading ...",
 	"wnby-geolocation-disabled": "Geolocation detection was disabled by the user.",
 	"wnby-geolocation-unsupported": "Geolocation detection is not supported by this browser.",
