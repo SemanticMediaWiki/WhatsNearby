@@ -372,7 +372,7 @@
 				// Try the geoip service as fallback
 				self.latitude = Geo.lat;
 				self.longitude = Geo.lon;
-				self.hasDetectedGeolocation = false;
+				self.hasDetectedGeolocation = true;
 				message = mw.message( 'wnby-geolocation-geoip-fallback' ).parse();
 				self.doOutput();
 			} else if (
