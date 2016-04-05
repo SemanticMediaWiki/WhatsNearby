@@ -10,8 +10,15 @@
 Whats Nearby is a small extension that adds geolocation (HTML5) detection information
 to templates in order for [`#ask`][smw] distance queries to generate adaptive content.
 
+This extension can be used to:
+
+- Display queryable content that depends on variable location information (`detectLocation`,
+  `watchLocation`)
+- Instantly modify distance queries  (`@@radius`) from a page view that rely on static coordinates
+- Generate dynamic queryable `#ask` lists
+
 Privacy: This extension makes actively use of the HTML5 geolocation feature in case the
-`nolocation` option is not used.
+`nolocation` parameter is not used.
 
 ## Requirements
 
@@ -50,7 +57,7 @@ displayed for a geolocation.
  |radius=300 m
  |interval=450
  |max=10000
- |maps=googlemaps
+ |format=googlemaps
  |detectLocation=true
  |watchLocation=false
  |localCache=300
@@ -61,6 +68,17 @@ displayed for a geolocation.
 
 Detailed information about the `#nearby` parser function and some template examples
 can be found [here](docs/README.md).
+
+### Geolocation
+
+`Whats Nearby` tries to determine the geolocation by first using the [HTML5 detection][geoloc]
+mechanism and if this fails and `$GLOBALS['wnbyExternalGeoIpService']` is enabled
+then `meta.wikimedia.org/geoiplookup` is being pinged to resolve coordinates on behalf
+of the browser IP address.
+
+If above methods did not return any meaningful response and where the `coordinates`
+parameter has been given information then those coordinates are used as
+default fallback for computing distance queries.
 
 ## Contribution and support
 
@@ -86,3 +104,4 @@ but can also be executed using `composer phpunit` from the extension base direct
 [travis]: https://travis-ci.org/SemanticMediaWiki/WhatsNearby
 [smw]: https://github.com/SemanticMediaWiki/SemanticMediaWiki
 [composer]: https://getcomposer.org/
+[geoloc]: https://dev.w3.org/geo/api-/spec-source.html

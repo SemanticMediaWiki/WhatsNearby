@@ -1,4 +1,4 @@
-- [#nearby](01-nearby.md) contains a short description how to work with the parser function
+- [#nearby](01-nearby.md) contains a description about the parser function
 
 ## Examples
 

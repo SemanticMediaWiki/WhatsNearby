@@ -89,8 +89,30 @@ class HookRegistry {
 
 			$vars['whats-nearby'] = array(
 				'wgCachePrefix'  => $GLOBALS['wgCachePrefix'] === false ? wfWikiID() : $GLOBALS['wgCachePrefix'],
-				'wgLanguageCode' => $GLOBALS['wgLang']->getCode()
+				'wgLanguageCode' => $GLOBALS['wgLang']->getCode(),
+				'wnbyExternalGeoIpService' => $GLOBALS['wnbyExternalGeoIpService']
 			);
+
+			return true;
+		};
+
+		/**
+		 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageParserOutput
+		 */
+		$this->handlers['OutputPageParserOutput'] = function ( $out, $parserOutput ) {
+
+			// If we know that geoip is not required then don't add it
+			if ( $parserOutput->getExtensionData( 'wnby-geoip' ) === null ||
+				$parserOutput->getExtensionData( 'wnby-geoip' ) === false ) {
+				return true;
+			}
+
+			// Copied from the ULS extension
+			if ( is_string( $GLOBALS['wnbyExternalGeoIpService'] ) ) {
+				$out->addModules( 'ext.whats.nearby.geoip' );
+			} elseif ( $GLOBALS['wnbyExternalGeoIpService'] === true ) {
+				$out->addScript( '<script src="//meta.wikimedia.org/geoiplookup"></script>' );
+			}
 
 			return true;
 		};

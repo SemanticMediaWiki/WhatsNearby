@@ -8,7 +8,7 @@
 /*global jQuery, mediaWiki, maps, md5 */
 /*jslint white: true */
 
-( function( $, mw, maps ) {
+( function( $, mw, maps, onoi ) {
 
 	'use strict';
 
@@ -80,6 +80,7 @@
 		this.longitude = '';
 
 		this.hasDetectedGeolocation = false;
+		this.container.find( '#output' ).empty();
 	};
 
 	/* Public methods */
@@ -113,7 +114,7 @@
 				postfix: ' ' + self.unit,
 				onFinish: function ( data ) {
 					self.limit = data.from;
-					self.parse();
+					self.doOutput();
 				}
 			} );
 		}
@@ -135,7 +136,7 @@
 					var limit = $( this ).attr( 'class' ).indexOf( 'limit-plus' ) > -1 ? currentVal + self.interval : currentVal - self.interval;
 					self.limit = limit < 0 ? 0 : limit;
 					controls.find( 'input[name=' + fieldName + ']' ).val( self.limit );
-					self.parse();
+					self.doOutput();
 				} else {
 					controls.find( 'input[name=' + fieldName + ']' ).val(0);
 				}
@@ -156,7 +157,7 @@
 			selection.change( function() {
 				selection.find( "select option:selected" ).each( function() {
 					self.template = $( this ).text();
-					self.parse();
+					self.doOutput();
 				} );
 			} );
 		}
@@ -229,89 +230,98 @@
 	};
 
 	/**
-	 * Build and parse the template content via the API and re-render the maps
+	 * Get content either from the API or from cache
 	 *
 	 * @since  1.0
 	 */
-	nearBy.prototype.parse = function() {
+	nearBy.prototype.doOutput = function() {
 
 		var self = this,
 			parameters = '',
 			template = '',
 			hash = '';
 
-		// No template -> no parse
-		if ( self.template === '' || self.template === undefined ) {
-			self.container.find( '#output' ).empty();
-
-			self.container
-				.find( '#status .error' )
-				.replaceWith( "<span class='error'>" + mw.msg( 'wnby-template-parameter-missing' ) + "</span>" );
-			return self;
-		};
-
 		template = self.buildTemplateCode();
-
 		hash = md5( template + self.VERSION );
-		self.container.find( '#output' ).addClass( 'overlay' );
 
-		self.container.find( '#status .localcache' ).empty();
-		self.container.find( '#status .error' ).empty();
-
-		// If possible try to retrieve content from the cache
-		if ( self.ttl > 0 && self.blobstore.get( hash ) !== null ) {
-			self.container
-					.find( '#output' )
-					.replaceWith( "<div id='output'>" + self.blobstore.get( hash ) + "</div>" );
-
-			var space = '';
-
-			if ( self.container.find( '#status .geolocation' ).text() !== '' ) {
-				space = '&#160;';
+		self.container.find( '#output' ).block( {
+			message: null,
+			overlayCSS: {
+				backgroundColor: '#fff',
+				opacity: 0.6,
+				cursor: 'wait'
 			}
+		} );
 
-			self.container
-					.find( '#status .localcache' )
-					.replaceWith( "<span class='localcache'>" + space + mw.msg( 'wnby-localcache-use' ) + "</span>" );
+		self.status( 'error', null );
 
-			self.reload();
-			return self;
-		}
+		// Async process
+		self.blobstore.get( hash, function( value ) {
 
-		// Avoid promise in promise execution therefore we wait until ajax has
-		// been resolved and only then re-render the maps
-		$.when(
-			self.mwApi.get( {
-				action: "parse",
-				title: mw.config.get( 'wgPageName' ),
-				section: 0, // Existing content will be replaced
-				// summary: section, // no need for a section heading
-				text: template
-			} ).done( function( data ) {
-				var text = data.parse.text['*'].replace(/<!--[\S\s]*?-->/gm, '' );
-
-				if ( self.ttl > 0 ) {
-					self.blobstore.set( hash, text, self.ttl );
-				}
-
+			// Do a reparse
+			if ( self.ttl == 0 || value === null ) {
+				self.status( 'localcache', null );
+				self.parse( hash, template );
+			} else {
 				self.container
 					.find( '#output' )
-					.replaceWith( "<div id='output'>" + text + "</div>" );
+					.replaceWith( "<div id='output'>" + value + "</div>" );
 
-				if ( self.container.find( '#status .localcache' ).text() !== '' ) {
-					self.container.find( '#status .localcache' ).empty();
+				self.container.find( '#output' ).unblock();
+
+				var space = '';
+
+				if ( self.container.find( '#status .geolocation' ).text() !== '' ) {
+					space = '&#160;';
 				}
-			} ).fail ( function( code, details ) {
-				self.container
-					.find( '#status .error' )
-					.replaceWith( "<span class='error'>" + code + ': ' + details.textStatus + "</span>" );
-			} ),
-			$.ready
-		).done( function( ) {
-			self.reload();
+
+				self.status( 'localcache', space + mw.msg( 'wnby-localcache-use' ) );
+				self.reload();
+			}
 		} );
 
 		return self;
+	};
+
+	/**
+	 * Parse the template content via the API and re-render the maps
+	 *
+	 * @since 1.0
+	 *
+	 * @param hash
+	 * @param template
+	 */
+	nearBy.prototype.parse = function( hash, template ) {
+
+		var self = this;
+
+		self.mwApi.get( {
+			action: "parse",
+			title: mw.config.get( 'wgPageName' ),
+			section: 0, // Existing content will be replaced
+			// summary: section, // no need for a section heading
+			text: template
+		} ).done( function( data ) {
+
+			// Remove any comments retrieved from the API parse process
+			var text = data.parse.text['*'].replace(/<!--[\S\s]*?-->/gm, '' );
+
+			if ( self.ttl > 0 ) {
+				self.blobstore.set( hash, text, self.ttl );
+			}
+
+			self.container
+				.find( '#output' )
+				.replaceWith( "<div id='output'>" + text + "</div>" );
+
+			self.reload();
+
+			self.status( 'localcache', null );
+			self.container.find( '#output' ).unblock();
+		} ).fail ( function( code, details ) {
+			self.status( 'error', code + ': ' + details.textStatus );
+			self.container.find( '#output' ).unblock();
+		} );
 	};
 
 	/**
@@ -358,15 +368,23 @@
 
 			var msgKey = '';
 
-			// latitude and longitude was declared, using it as fallback
-			if (
+			if ( window.hasOwnProperty( 'Geo' ) ) {
+				// Try the geoip service as fallback
+				self.latitude = Geo.lat;
+				self.longitude = Geo.lon;
+				self.hasDetectedGeolocation = false;
+				message = mw.message( 'wnby-geolocation-geoip-fallback' ).parse();
+				self.doOutput();
+			} else if (
 				self.parameters.hasOwnProperty( 'coordinates') &&
 				self.parameters.coordinates.indexOf( "," ) > 0 ) {
+
+				// latitude and longitude was declared, using it as fallback
 				self.latitude = self.parameters.coordinates.split( "," )[0];
 				self.longitude = self.parameters.coordinates.split( "," )[1];
 				self.hasDetectedGeolocation = false;
 				msgKey = 'wnby-default-fallback-location';
-				self.parse();
+				self.doOutput();
 			} else if ( self.parameters.hasOwnProperty( 'coordinates') ) {
 				msgKey = 'wnby-invalid-coordinates-format';
 				self.container.find( '#output' ).empty();
@@ -375,16 +393,17 @@
 				self.container.find( '#output' ).empty();
 			}
 
-			self.container
-				.find( '#status .geolocation' )
-				.replaceWith( "<span class='geolocation'>" + message + ' ' + mw.msg( msgKey ) + "</span>" );
+			self.status(
+				'geolocation',
+				message + ( message !== '' ? ' ' : '' ) + ( msgKey !== '' ?  mw.msg( msgKey ) : '' )
+			);
 		}
 
 		function success( position ) {
 			self.latitude = position.coords.latitude;
 			self.longitude = position.coords.longitude;
 			self.hasDetectedGeolocation = true;
-			self.parse();
+			self.doOutput();
 		}
 
 		// https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation#Getting_the_current_position
@@ -410,6 +429,30 @@
 		return self;
 	};
 
+	/**
+	 * @since 1.0
+	 *
+	 * @param id,
+	 * @param message
+	 *
+	 * @return {this}
+	 */
+	nearBy.prototype.status = function( id, message ) {
+
+		var self = this,
+			instance = self.container.find( '#status .' + id );
+
+		if ( message === null ) {
+			instance.empty();
+		} else {
+			instance.replaceWith(
+				"<span class='" + id + "'>" + message + "</span>"
+			);
+		}
+
+		return self;
+	}
+
 	$( function( $ ) {
 
 		/**
@@ -417,24 +460,27 @@
 		 */
 		$( '.whats-nearby' ).each( function() {
 
-			var whatsNearBy = new nearBy(
+			var whatsNearby = new nearBy(
 				$( this ),
 				new mw.Api(),
 				new maps.services( $( this ) ),
-				new blobstore(
+				new onoi.blobstore(
 					'whats-nearby' +  ':' +
 					mw.config.get( 'whats-nearby' ).wgLanguageCode + ':' +
 					mw.config.get( 'whats-nearby' ).wgCachePrefix
 				)
 			);
 
-			if ( whatsNearBy.parameters.hasOwnProperty( 'nolocation' ) ) {
-				whatsNearBy.parse().searchNearby();
+			// No template -> no parse
+			if ( whatsNearby.template === '' || whatsNearby.template === undefined ) {
+				whatsNearby.status( 'error', mw.msg( 'wnby-template-parameter-missing' ) );
+			} else if ( whatsNearby.parameters.hasOwnProperty( 'nolocation' ) ) {
+				whatsNearby.doOutput().searchNearby();
 			} else {
-				whatsNearBy.detectGeolocation().searchNearby();
+				whatsNearby.detectGeolocation().searchNearby();
 			}
 		} );
 
 	} );
 
-}( jQuery, mediaWiki, maps ) );
+}( jQuery, mediaWiki, maps, onoi ) );
