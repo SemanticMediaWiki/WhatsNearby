@@ -72,7 +72,7 @@ can be found [here](docs/README.md).
 ### Geolocation
 
 `Whats Nearby` tries to determine the geolocation by first using the [HTML5 detection][geoloc]
-mechanism and if this fails and `$GLOBALS['wnbyExternalGeoIpService']` is enabled
+mechanism and if this fails and `$GLOBALS['wnbyExternalGeoipService']` is enabled
 then `meta.wikimedia.org/geoiplookup` is being pinged to resolve coordinates on behalf
 of the browser IP address.
 

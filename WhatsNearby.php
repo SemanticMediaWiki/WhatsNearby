@@ -46,13 +46,13 @@ call_user_func( function() {
 	 * Specifies whether an external service should be used
 	 * to help with resolving a Geolocation.
 	 *
-	 * If `wnbyExternalGeoIpService` is set true then
+	 * If `wnbyExternalGeoipService` is set true then
 	 * https://meta.wikimedia.org/geoiplookup is being used.
 	 *
-	 * `wnbyExternalGeoIpService` can also hold an https service
+	 * `wnbyExternalGeoipService` can also hold an https service
 	 * provider.
 	 */
-	$GLOBALS['wnbyExternalGeoIpService'] = true;
+	$GLOBALS['wnbyExternalGeoipService'] = true;
 
 	$GLOBALS['wgResourceModules']['ext.whats.nearby.geoip'] = array(
 		'localBasePath' => __DIR__ ,

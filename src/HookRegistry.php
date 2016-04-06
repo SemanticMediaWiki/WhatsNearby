@@ -90,7 +90,7 @@ class HookRegistry {
 			$vars['whats-nearby'] = array(
 				'wgCachePrefix'  => $GLOBALS['wgCachePrefix'] === false ? wfWikiID() : $GLOBALS['wgCachePrefix'],
 				'wgLanguageCode' => $GLOBALS['wgLang']->getCode(),
-				'wnbyExternalGeoIpService' => $GLOBALS['wnbyExternalGeoIpService']
+				'wnbyExternalGeoipService' => $GLOBALS['wnbyExternalGeoipService']
 			);
 
 			return true;
@@ -108,9 +108,9 @@ class HookRegistry {
 			}
 
 			// Copied from the ULS extension
-			if ( is_string( $GLOBALS['wnbyExternalGeoIpService'] ) ) {
+			if ( is_string( $GLOBALS['wnbyExternalGeoipService'] ) ) {
 				$out->addModules( 'ext.whats.nearby.geoip' );
-			} elseif ( $GLOBALS['wnbyExternalGeoIpService'] === true ) {
+			} elseif ( $GLOBALS['wnbyExternalGeoipService'] === true ) {
 				$out->addScript( '<script src="//meta.wikimedia.org/geoiplookup"></script>' );
 			}
 

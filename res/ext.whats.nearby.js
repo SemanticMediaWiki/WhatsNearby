@@ -79,6 +79,15 @@
 		this.latitude = '';
 		this.longitude = '';
 
+		// Geoip
+		this.canUseGeoipAsFallback = mw.config.get( 'whats-nearby' ).wnbyExternalGeoipService;
+
+		if ( this.canUseGeoipAsFallback &&
+			this.parameters.hasOwnProperty( 'detectlocation' ) &&
+			this.parameters.detectlocation === 'false' ) {
+			this.canUseGeoipAsFallback = false;
+		}
+
 		this.hasDetectedGeolocation = false;
 		this.container.find( '#output' ).empty();
 	};
@@ -368,7 +377,7 @@
 
 			var msgKey = '';
 
-			if ( window.hasOwnProperty( 'Geo' ) ) {
+			if ( self.canUseGeoipAsFallback && window.hasOwnProperty( 'Geo' ) ) {
 				// Try the geoip service as fallback
 				self.latitude = Geo.lat;
 				self.longitude = Geo.lon;
