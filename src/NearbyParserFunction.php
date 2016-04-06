@@ -31,7 +31,9 @@ class NearbyParserFunction {
 	/**
 	 * @since  1.0
 	 *
-	 * @return array $params
+	 * @param array $params
+	 *
+	 * @return string
 	 */
 	public function parse( array $params ) {
 
