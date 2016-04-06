@@ -373,7 +373,7 @@
 				self.latitude = Geo.lat;
 				self.longitude = Geo.lon;
 				self.hasDetectedGeolocation = true;
-				message = mw.message( 'wnby-geolocation-geoip-fallback' ).parse();
+				message = mw.message( 'wnby-geolocation-geoip-fallback', self.latitude, self.longitude ).parse();
 				self.doOutput();
 			} else if (
 				self.parameters.hasOwnProperty( 'coordinates') &&
