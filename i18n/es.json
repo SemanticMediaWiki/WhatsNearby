@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"AlvaroMolina",
+			"Macofe"
+		]
+	},
+	"wnby-desc": "Proporciona información de detección de geolocalización a las plantillas",
+	"wnby-loading": "Cargando...",
+	"wnby-geolocation-disabled": "El usuario desactivó la detección por geolocalización.",
+	"wnby-geolocation-unsupported": "Este navegador no admite la detección por geolocalización.",
+	"wnby-geolocation-unknown-error": "Ocurrió un error desconocido.",
+	"wnby-geolocation-timeout-error": "Se agotó el tiempo de espera de la solicitud para obtener la ubicación del usuario.",
+	"wnby-geolocation-position-unavailable": "No está disponible la información de geolocalización.",
+	"wnby-geolocation-permission-denied": "El usuario denegó la solicitud para la geolocalización.",
+	"wnby-geolocation-geoip-fallback": "Las coordenadas de geolocalización ($1, $2) se resolvieron por un servicio [https://en.wikipedia.org/wiki/IP_address_location ubicación de direcciones IP] externo.",
+	"wnby-no-fallback-location": "No hay reserva de ubicación está disponible.",
+	"wnby-default-fallback-location": "El uso de las coordenadas por defecto como retroceso.",
+	"wnby-invalid-coordinates-format": "El formato de coordenadas predeterminado espera una latitud, longitud.",
+	"wnby-localcache-use": "Los datos se recuperaron del caché local del navegador.",
+	"wnby-template-parameter-missing": "Falta un parámetro de plantilla obligatorio."
+}

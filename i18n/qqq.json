@@ -2,20 +2,22 @@
 	"@metadata": {
 		"authors": [
 			"mwjames",
-			"Kghbln"
+			"Kghbln",
+			"Liuxinyu970226"
 		]
 	},
 	"wnby-desc": "{{desc|name=Whats Nearby|url=https://www.semantic-mediawiki.org/wiki/Extension:Whats_Nearby}}",
-	"wnby-loading": "This is an informatory message.",
+	"wnby-loading": "This is an informatory message.\n{{Identical|Loading}}",
 	"wnby-geolocation-disabled": "This is an informatory message.",
 	"wnby-geolocation-unsupported": "This is an informatory message.",
 	"wnby-geolocation-unknown-error": "This is an error message.",
 	"wnby-geolocation-timeout-error": "This is an error message.",
 	"wnby-geolocation-position-unavailable": "This is an informatory message.",
 	"wnby-geolocation-permission-denied": "This is an informatory message.",
+	"wnby-geolocation-geoip-fallback": "This is an informatory message. The external link to the Wikipedia article included in this message may be adapted if your language provides such an article.\n\nThe parameters used:\n* $1 - Holds the latitude value of the coordinate\n* $2 - Holds the longitude value of the coordinates",
 	"wnby-no-fallback-location": "This is an informatory message.\n\nFallback = Location shown when no geoposition was detected.",
 	"wnby-default-fallback-location": "This is an informatory message.\n\nFallback = Location shown when no geoposition was detected.",
-	"wnby-invalid-coordinates-format" : "This is an error message.",
+	"wnby-invalid-coordinates-format": "This is an error message.",
 	"wnby-localcache-use": "This is an informatory message.",
 	"wnby-template-parameter-missing": "This is an error message."
 }

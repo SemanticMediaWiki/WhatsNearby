@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226"
+		]
+	},
+	"wnby-desc": "将地理位置检测信息提供给模板",
+	"wnby-loading": "正在载入...",
+	"wnby-geolocation-disabled": "地理位置检测已被用户禁用。",
+	"wnby-geolocation-unsupported": "地理位置检测不支持该浏览器。",
+	"wnby-geolocation-unknown-error": "发生未知错误。",
+	"wnby-geolocation-timeout-error": "请求获取用户位置超时。",
+	"wnby-geolocation-position-unavailable": "地理位置信息不可用。",
+	"wnby-geolocation-permission-denied": "用户拒绝了地理位置请求。",
+	"wnby-geolocation-geoip-fallback": "地理位置坐标（$1, $2）已由外部[https://en.wikipedia.org/wiki/IP_address_location IP地址位置]服务解决。",
+	"wnby-no-fallback-location": "没有可用的备选位置。",
+	"wnby-default-fallback-location": "使用默认坐标作为备选。",
+	"wnby-invalid-coordinates-format": "默认坐标格式应为纬度, 精度。",
+	"wnby-localcache-use": "数据检索自本地浏览器缓存。",
+	"wnby-template-parameter-missing": "丢失需要的模板参数。"
+}

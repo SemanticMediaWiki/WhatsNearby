@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Verdy p",
+			"Wladek92"
+		]
+	},
+	"wnby-desc": "Fournit les informations de détection par géolocalisation aux modèles",
+	"wnby-loading": "Chargement...",
+	"wnby-geolocation-disabled": "La détection par géolocalisation a été désactivée par l'utilisateur.",
+	"wnby-geolocation-unsupported": "La détection par géolocalisation n’est pas prise en charge par ce navigateur.",
+	"wnby-geolocation-unknown-error": "Une erreur inconnue s’est produite.",
+	"wnby-geolocation-timeout-error": "Le temps alloué à la demande pour obtenir l’emplacement de l'utilisateur a expiré.",
+	"wnby-geolocation-position-unavailable": "L’information de géolocalisation n’est pas disponible.",
+	"wnby-geolocation-permission-denied": "L’utilisateur a refusé la demande de géolocalisation.",
+	"wnby-geolocation-geoip-fallback": "Les coordonnées géographiques ($1, $2) ont été fournies par un service externe de [https://en.wikipedia.org/wiki/IP_address_location Géo localisation par adresse IP].",
+	"wnby-no-fallback-location": "Pas de lieu de secours disponible .",
+	"wnby-default-fallback-location": "En utilisant les coordonnées par défaut comme solution de repli.",
+	"wnby-invalid-coordinates-format": "Le format des coordonnées par défaut attend une latitude, une longitude.",
+	"wnby-localcache-use": "Les données ont été récupérées à partir du cache local du navigateur.",
+	"wnby-template-parameter-missing": "Un paramètre nécessaire du modèle est manquant."
+}

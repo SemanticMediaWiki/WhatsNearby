@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mykola Swarnyk",
+			"Piramidion"
+		]
+	},
+	"wnby-desc": "Додає інформацію про позиціонування до шаблонів",
+	"wnby-loading": "Вантажиться...",
+	"wnby-geolocation-disabled": "Автоматичне позиціонування відключене користувачем.",
+	"wnby-geolocation-unsupported": "Автоматичне позиціонування пе підтримується цим переглядачем.",
+	"wnby-geolocation-unknown-error": "Трапилась невідома помилка.",
+	"wnby-geolocation-timeout-error": "Збіг час запиту на визначення розташування.",
+	"wnby-geolocation-position-unavailable": "Просторове положення невідоме.",
+	"wnby-geolocation-permission-denied": "Запит на позиціонування відхилений користувачем.",
+	"wnby-geolocation-geoip-fallback": "Координати розташування ($1, $2) визначені зовнішньою службою [https://en.wikipedia.org/wiki/IP_address_location геоіндикації IP-адреси]",
+	"wnby-no-fallback-location": "Фолбек-позиція недоступна.",
+	"wnby-default-fallback-location": "Використати звичні координати для фолбек-позиції.",
+	"wnby-invalid-coordinates-format": "Формат звичних координат: широта, довгота.",
+	"wnby-localcache-use": "Дані отримані з буфера локального переглядача.",
+	"wnby-template-parameter-missing": "Бракує обов'язкового параметра шаблону."
+}
