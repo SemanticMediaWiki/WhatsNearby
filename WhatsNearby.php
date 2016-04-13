@@ -91,6 +91,7 @@ call_user_func( function() {
 			'wnby-geolocation-permission-denied',
 			'wnby-no-fallback-location',
 			'wnby-geolocation-geoip-fallback',
+			'wnby-geolocation-geoip-no-fallback',
 			'wnby-default-fallback-location',
 			'wnby-invalid-coordinates-format',
 			'wnby-localcache-use',

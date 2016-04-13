@@ -13,6 +13,7 @@
 	"wnby-geolocation-position-unavailable": "Geolocation information is unavailable.",
 	"wnby-geolocation-permission-denied": "User denied the request for Geolocation.",
 	"wnby-geolocation-geoip-fallback": "Geolocation coordinates ($1, $2) were resolved by an external [https://en.wikipedia.org/wiki/IP_address_location IP address location] service.",
+	"wnby-geolocation-geoip-no-fallback": "An attempt to resolve Geolocation coordinates ($1, $2) from an external service was unsuccessful.",
 	"wnby-no-fallback-location": "No fallback location is available.",
 	"wnby-default-fallback-location": "Using the default coordinates as fallback.",
 	"wnby-invalid-coordinates-format" : "The default coordinates format is expecting a latitude, longitude.",

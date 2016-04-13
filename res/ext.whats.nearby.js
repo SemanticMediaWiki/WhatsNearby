@@ -354,6 +354,11 @@
 		// https://developer.mozilla.org/en-US/docs/Web/API/PositionError
 		function error( message ) {
 
+			var msgKey = '',
+				canOutput = false;
+
+			self.hasDetectedGeolocation = false;
+
 			switch ( message.code ) {
 				case message.PERMISSION_DENIED:
 					message = mw.msg( 'wnby-geolocation-permission-denied' );
@@ -375,32 +380,45 @@
 					break;
 			}
 
-			var msgKey = '';
-
-			if ( self.canUseGeoipAsFallback && window.hasOwnProperty( 'Geo' ) ) {
-				// Try the geoip service as fallback
+			// Try the geoip service as fallback but avoid things like 0.000000, 0.000000
+			if (
+				self.canUseGeoipAsFallback &&
+				window.hasOwnProperty( 'Geo' ) &&
+				Geo.lat > 0 ) {
 				self.latitude = Geo.lat;
 				self.longitude = Geo.lon;
 				self.hasDetectedGeolocation = true;
 				message = mw.message( 'wnby-geolocation-geoip-fallback', self.latitude, self.longitude ).parse();
-				self.doOutput();
+				canOutput = true;
 			} else if (
-				self.parameters.hasOwnProperty( 'coordinates') &&
-				self.parameters.coordinates.indexOf( "," ) > 0 ) {
+				self.canUseGeoipAsFallback &&
+				window.hasOwnProperty( 'Geo' ) ) {
+				message = mw.message( 'wnby-geolocation-geoip-no-fallback', Geo.lat, Geo.lon ).parse();
+			}
 
-				// latitude and longitude was declared, using it as fallback
+			// Try possible explicit fallback coordinates
+			if (
+				self.hasDetectedGeolocation === false &&
+				self.parameters.hasOwnProperty( 'coordinates' ) &&
+				self.parameters.coordinates.indexOf( "," ) > 0 ) {
 				self.latitude = self.parameters.coordinates.split( "," )[0];
 				self.longitude = self.parameters.coordinates.split( "," )[1];
-				self.hasDetectedGeolocation = false;
 				msgKey = 'wnby-default-fallback-location';
-				self.doOutput();
-			} else if ( self.parameters.hasOwnProperty( 'coordinates') ) {
+				canOutput = true;
+			} else if (
+				self.hasDetectedGeolocation === false &&
+				self.parameters.hasOwnProperty( 'coordinates' ) ) {
 				msgKey = 'wnby-invalid-coordinates-format';
 				self.container.find( '#output' ).empty();
-			} else {
+			} else if (
+				self.hasDetectedGeolocation === false ) {
 				msgKey = 'wnby-no-fallback-location';
 				self.container.find( '#output' ).empty();
 			}
+
+			if ( canOutput ) {
+				self.doOutput();
+			};
 
 			self.status(
 				'geolocation',
