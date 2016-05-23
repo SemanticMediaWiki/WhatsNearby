@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alexandr Efremov",
+			"Okras"
+		]
+	},
+	"wnby-desc": "Добавляет информацию о позиционировании шаблонов",
+	"wnby-loading": "Загрузка …",
+	"wnby-geolocation-disabled": "Автоматическое позиционирование отключено пользователем.",
+	"wnby-geolocation-unsupported": "Автоматическое позиционирование не поддерживается этим браузером.",
+	"wnby-geolocation-unknown-error": "Произошла неизвестная ошибка.",
+	"wnby-geolocation-timeout-error": "Время для получения местоположения пользователя истекло.",
+	"wnby-geolocation-position-unavailable": "Пространственное положение неизвестно.",
+	"wnby-geolocation-permission-denied": "Запрос на позиционирование отклонен пользователем.",
+	"wnby-geolocation-geoip-fallback": "Координаты местоположения ($1, $2) определены внешней службой [https://en.wikipedia.org/wiki/IP_address_location геоиндекации IP-адреса]",
+	"wnby-geolocation-geoip-no-fallback": "Попытка получить координаты ($1, $2) от внешней службы прошла неудачно.",
+	"wnby-no-fallback-location": "Фолбек-позиция недоступна.",
+	"wnby-default-fallback-location": "Использовать привычные координаты для фолбек-позиции.",
+	"wnby-invalid-coordinates-format": "Формат привычных координат: широта, долгота.",
+	"wnby-localcache-use": "Данные полученные с локального буфера браузера.",
+	"wnby-template-parameter-missing": "Не хватает обязательного параметра шаблона."
+}

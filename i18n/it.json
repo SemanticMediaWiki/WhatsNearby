@@ -12,6 +12,7 @@
 	"wnby-geolocation-timeout-error": "La richiesta per ottenere la posizione dell'utente è scaduta.",
 	"wnby-geolocation-position-unavailable": "Informazioni di geolocalizzazione non sono disponibili.",
 	"wnby-geolocation-permission-denied": "L'utente ha negato la richiesta di geolocalizzazione.",
+	"wnby-geolocation-geoip-no-fallback": "Un tentativo di risolvere le coordinate geografiche ($1, $2) da un servizio esterno non è riuscito.",
 	"wnby-invalid-coordinates-format": "Il formato predefinito delle coordinate si aspetta latitudine, longitudine.",
 	"wnby-localcache-use": "I dati sono stati recuperati dalla cache del browser locale.",
 	"wnby-template-parameter-missing": "Un parametro obbligatorio del template è mancante."

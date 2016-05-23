@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Verdy p",
-			"Wladek92"
+			"Wladek92",
+			"Gomoko"
 		]
 	},
 	"wnby-desc": "Fournit les informations de détection par géolocalisation aux modèles",
@@ -14,6 +15,7 @@
 	"wnby-geolocation-position-unavailable": "L’information de géolocalisation n’est pas disponible.",
 	"wnby-geolocation-permission-denied": "L’utilisateur a refusé la demande de géolocalisation.",
 	"wnby-geolocation-geoip-fallback": "Les coordonnées géographiques ($1, $2) ont été fournies par un service externe de [https://en.wikipedia.org/wiki/IP_address_location Géo localisation par adresse IP].",
+	"wnby-geolocation-geoip-no-fallback": "Une tentative pour déterminer les coordonnées de géolocalisation ($1, $2) depuis un service externe a échoué.",
 	"wnby-no-fallback-location": "Pas de lieu de secours disponible .",
 	"wnby-default-fallback-location": "En utilisant les coordonnées par défaut comme solution de repli.",
 	"wnby-invalid-coordinates-format": "Le format des coordonnées par défaut attend une latitude, une longitude.",

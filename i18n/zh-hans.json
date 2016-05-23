@@ -13,6 +13,7 @@
 	"wnby-geolocation-position-unavailable": "地理位置信息不可用。",
 	"wnby-geolocation-permission-denied": "用户拒绝了地理位置请求。",
 	"wnby-geolocation-geoip-fallback": "地理位置坐标（$1, $2）已由外部[https://en.wikipedia.org/wiki/IP_address_location IP地址位置]服务解决。",
+	"wnby-geolocation-geoip-no-fallback": "试图从外部服务解决定位坐标（$1, $2）未成功。",
 	"wnby-no-fallback-location": "没有可用的备选位置。",
 	"wnby-default-fallback-location": "使用默认坐标作为备选。",
 	"wnby-invalid-coordinates-format": "默认坐标格式应为纬度, 精度。",

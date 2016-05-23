@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Guycn2"
+		]
+	},
+	"wnby-desc": "אספקת מידע גאוגרפי בתבניות",
+	"wnby-loading": "טוען ...",
+	"wnby-geolocation-disabled": "האפשרות לאתר את המיקום בוטלה על־ידי המשתמש.",
+	"wnby-geolocation-unsupported": "זיהוי גאוגרפי אינו נתמך על־ידי דפדפן זה.",
+	"wnby-geolocation-unknown-error": "אירעה שגיאה לא ידועה.",
+	"wnby-geolocation-timeout-error": "זמן ההמתנה של הבקשה לאיתור מיקום המשתמש חלף.",
+	"wnby-geolocation-position-unavailable": "מידע גאוגרפי לא זמין.",
+	"wnby-geolocation-permission-denied": "המשתמש דחה את הבקשה לאיתור המיקום.",
+	"wnby-geolocation-geoip-fallback": "נקודות ציון של מיקום גאוגרפי ($1, $2) תוקנו באמצעות שירות [https://en.wikipedia.org/wiki/IP_address_location מיקום כתובות IP] חיצוני.",
+	"wnby-geolocation-geoip-no-fallback": "ניסיון למצוא נקודות ציון של מיקום גאוגרפי ($1, $2) באמצעות שירות חיצוני לא הצליח.",
+	"wnby-localcache-use": "נתונים אוחזרו מהמטמון של הדפדפן המקומי.",
+	"wnby-template-parameter-missing": "חסר פרמטר נדרש בתבנית."
+}
