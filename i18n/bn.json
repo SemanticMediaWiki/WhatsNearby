@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aftabuzzaman"
+		]
+	},
+	"wnby-desc": "টেমপ্লেটে ভূঅবস্থান সনাক্তকরণ তথ্য প্রদান করে",
+	"wnby-loading": "লোড করা হচ্ছে...",
+	"wnby-geolocation-disabled": "ব্যবহারকারী দ্বারা ভৌগলিক সনাক্তকরণ অক্ষম করা হয়েছিল।",
+	"wnby-geolocation-unsupported": "ভৌগলিক সনাক্তকরণ এই ব্রাউজার দ্বারা সমর্থিত নয়।",
+	"wnby-geolocation-unknown-error": "একটি অজানা ত্রুটি দেখা দিয়েছে।",
+	"wnby-geolocation-timeout-error": "ব্যবহারকারীর অবস্থান পেতে অনুরোধ করার সময় শেষ হয়েছে।",
+	"wnby-geolocation-position-unavailable": "ভৌগলিক তথ্য অনুপলব্ধ।",
+	"wnby-geolocation-permission-denied": "ব্যবহারকারী ভূঅবস্থানের জন্য অনুরোধ অস্বীকার করেছেন।",
+	"wnby-geolocation-geoip-fallback": "ভৌগলিক স্থানাঙ্ক ($1, $2) একটি বহিঃস্থ [https://bn.wikipedia.org/wiki/আইপি_ঠিকানার_অবস্থান আইপি ঠিকানার অবস্থানের পরিষেবা] দ্বারা সমাধান করা হয়েছে।",
+	"wnby-geolocation-geoip-no-fallback": "একটি বহিঃস্থ পরিষেবা থেকে ভৌগলিক স্থানাঙ্ক ($1, $2) সমাধান করার প্রচেষ্টা সফল হয়নি।",
+	"wnby-no-fallback-location": "কোন ফলব্যাক অবস্থান পাওয়া যায়নি।",
+	"wnby-default-fallback-location": "ফলব্যাক হিসাবে পূর্বনির্ধারিত স্থানাঙ্ক ব্যবহৃত হচ্ছে।",
+	"wnby-invalid-coordinates-format": "ডিফল্ট স্থানাঙ্ক বিন্যাস একটি দ্রাঘিমাংশ, অক্ষাংশ আশা করছে।",
+	"wnby-localcache-use": "উপাত্ত স্থানীয় ব্রাউজারের ক্যাশে থেকে উদ্ধার করা হয়েছে।",
+	"wnby-template-parameter-missing": "একটি প্রয়োজনীয় টেমপ্লেট প্যারামিটার অনুপস্থিত।"
+}

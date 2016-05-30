@@ -15,6 +15,7 @@
 	"wnby-geolocation-position-unavailable": "This is an informatory message.",
 	"wnby-geolocation-permission-denied": "This is an informatory message.",
 	"wnby-geolocation-geoip-fallback": "This is an informatory message. The external link to the Wikipedia article included in this message may be adapted if your language provides such an article.\n\nThe parameters used:\n* $1 - Holds the latitude value of the coordinate\n* $2 - Holds the longitude value of the coordinates",
+	"wnby-geolocation-geoip-no-fallback": "This is an error message.\n\nThe parameters used:\n* $1 - Holds the latitude value of the coordinate\n* $2 - Holds the longitude value of the coordinates",
 	"wnby-no-fallback-location": "This is an informatory message.\n\nFallback = Location shown when no geoposition was detected.",
 	"wnby-default-fallback-location": "This is an informatory message.\n\nFallback = Location shown when no geoposition was detected.",
 	"wnby-invalid-coordinates-format": "This is an error message.",

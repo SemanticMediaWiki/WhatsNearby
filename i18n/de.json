@@ -14,11 +14,11 @@
 	"wnby-geolocation-timeout-error": "Die Abfrage des aktuellen Standorts hat zu lange benötigt.",
 	"wnby-geolocation-position-unavailable": "Der aktuelle Standort kann nicht ermittelt werden.",
 	"wnby-geolocation-permission-denied": "Der Benutzer hat die Abfrage nach dem aktuellen Standort abgelehnt.",
-	"wnby-geolocation-geoip-fallback": "Die Standordkoordinaten ($1, $2) werden durch einen externen [https://de.wikipedia.org/wiki/Geolokationssoftware Geo-IP-Standort]-Dienst bereitgestellt.",
-	"wnby-geolocation-geoip-no-fallback": "Ein Versuch, die Geostandort-Koordinaten ($1, $2) von einem externen Dienst zu lösen, war nicht erfolgreich.",
+	"wnby-geolocation-geoip-fallback": "Die Standordkoordinaten ($1, $2) werden durch einen externen [https://de.wikipedia.org/wiki/Geolokationssoftware Geo-IP-Standortdienst] bereitgestellt.",
+	"wnby-geolocation-geoip-no-fallback": "Der Versuch, die Standortkoordinaten ($1, $2) mit einem externen Geo-IP-Standortdienst zu bestimmen, war erfolglos.",
 	"wnby-no-fallback-location": "Es ist kein Ersatzstandort verfügbar.",
 	"wnby-default-fallback-location": "Die voreingestellten Standortkoordinaten werden als Ersatzstandort verwendet.",
 	"wnby-invalid-coordinates-format": "Das Format für die Standortkoordinaten muss als Breiten- sowie Längengrad vorliegen.",
 	"wnby-localcache-use": "Die Standortkoordinaten wurden aus dem lokalen Browsercache abgerufen.",
-	"wnby-template-parameter-missing": "Ein benötigter Parameter für die Vorlage fehlt."
+	"wnby-template-parameter-missing": "Ein für die Vorlage benötigter Parameter fehlt."
 }
