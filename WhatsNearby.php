@@ -29,12 +29,12 @@ define( 'WNBY_VERSION', '1.0.0-alpha' );
 call_user_func( function() {
 
 	$GLOBALS['wgExtensionCredits']['parserhook'][] = array(
-		'path' => __FILE__,
-		'name' => 'Whats Nearby',
-		'author' =>array( 'mwjames' ),
-		'url' => 'https://www.semantic-mediawiki.org/wiki/Extension:WhatsNearby',
-		'description' => 'wnby-desc',
-		'version'  => WNBY_VERSION,
+		'path'           => __DIR__,
+		'name'           => 'Whats Nearby',
+		'author'         => array( 'mwjames' ),
+		'url'            => 'https://www.semantic-mediawiki.org/wiki/Extension:WhatsNearby',
+		'descriptionmsg' => 'wnby-desc',
+		'version'        => WNBY_VERSION,
 		'license-name'   => 'GPL-2.0+',
 	);
 
@@ -58,7 +58,7 @@ call_user_func( function() {
 		'localBasePath' => __DIR__ ,
 		'remoteExtPath' => 'WhatsNearby',
 		'position' => 'bottom',
-		'scripts' => array(
+		'scripts'  => array(
 			'res/ext.whats.nearby.geoip.js'
 		),
 		'targets' => array(
@@ -71,8 +71,8 @@ call_user_func( function() {
 		'localBasePath' => __DIR__ ,
 		'remoteExtPath' => 'WhatsNearby',
 		'position' => 'bottom',
-		'styles' => array( 'res/ext.whats.nearby.css' ),
-		'scripts' => array( 'res/ext.whats.nearby.js' ),
+		'styles'   => array( 'res/ext.whats.nearby.css' ),
+		'scripts'  => array( 'res/ext.whats.nearby.js' ),
 		'dependencies'  => array(
 			'mediawiki.api',
 			'mediawiki.api.parse',

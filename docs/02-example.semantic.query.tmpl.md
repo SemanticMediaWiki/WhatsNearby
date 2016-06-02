@@ -10,5 +10,5 @@
  |limit={{{limit|5}}}
  |sort={{{sort|}}}
  |order={{{order|}}}
- |format={{{format}}}
+ |format={{{format|table}}}
 }}</includeonly>

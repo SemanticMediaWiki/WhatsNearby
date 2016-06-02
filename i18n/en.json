@@ -18,5 +18,5 @@
 	"wnby-default-fallback-location": "Using the default coordinates as fallback.",
 	"wnby-invalid-coordinates-format" : "The default coordinates format is expecting a latitude, longitude.",
 	"wnby-localcache-use": "Data were retrieved from the local browser cache.",
-	"wnby-template-parameter-missing": "A required template parameter is missing."
+	"wnby-template-parameter-missing": "A required \"querytemplate\" parameter is missing."
 }
