@@ -16,5 +16,5 @@
 	"wnby-geolocation-geoip-fallback": "נקודות ציון של מיקום גאוגרפי ($1, $2) תוקנו באמצעות שירות [https://en.wikipedia.org/wiki/IP_address_location מיקום כתובות IP] חיצוני.",
 	"wnby-geolocation-geoip-no-fallback": "ניסיון למצוא נקודות ציון של מיקום גאוגרפי ($1, $2) באמצעות שירות חיצוני לא הצליח.",
 	"wnby-localcache-use": "נתונים אוחזרו מהמטמון של הדפדפן המקומי.",
-	"wnby-template-parameter-missing": "חסר פרמטר נדרש בתבנית."
+	"wnby-template-parameter-missing": "חסר פרמטר מסוג \"querytemplate\" שנדרש בתבנית."
 }

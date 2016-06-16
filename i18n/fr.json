@@ -3,7 +3,8 @@
 		"authors": [
 			"Verdy p",
 			"Wladek92",
-			"Gomoko"
+			"Gomoko",
+			"Yasten"
 		]
 	},
 	"wnby-desc": "Fournit les informations de détection par géolocalisation aux modèles",
@@ -20,5 +21,5 @@
 	"wnby-default-fallback-location": "En utilisant les coordonnées par défaut comme solution de repli.",
 	"wnby-invalid-coordinates-format": "Le format des coordonnées par défaut attend une latitude, une longitude.",
 	"wnby-localcache-use": "Les données ont été récupérées à partir du cache local du navigateur.",
-	"wnby-template-parameter-missing": "Un paramètre nécessaire du modèle est manquant."
+	"wnby-template-parameter-missing": "Un paramètre nécessaire de «querytemplate» est manquant."
 }

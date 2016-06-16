@@ -20,5 +20,5 @@
 	"wnby-default-fallback-location": "Die voreingestellten Standortkoordinaten werden als Ersatzstandort verwendet.",
 	"wnby-invalid-coordinates-format": "Das Format für die Standortkoordinaten muss als Breiten- sowie Längengrad vorliegen.",
 	"wnby-localcache-use": "Die Standortkoordinaten wurden aus dem lokalen Browsercache abgerufen.",
-	"wnby-template-parameter-missing": "Ein für die Vorlage benötigter Parameter fehlt."
+	"wnby-template-parameter-missing": "Es fehlt ein erforderlicher Parameter „querytemplate“."
 }

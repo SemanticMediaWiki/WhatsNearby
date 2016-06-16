@@ -18,5 +18,5 @@
 	"wnby-default-fallback-location": "El uso de las coordenadas por defecto como retroceso.",
 	"wnby-invalid-coordinates-format": "El formato de coordenadas predeterminado espera una latitud, longitud.",
 	"wnby-localcache-use": "Los datos se recuperaron del caché local del navegador.",
-	"wnby-template-parameter-missing": "Falta un parámetro de plantilla obligatorio."
+	"wnby-template-parameter-missing": "Falta un parámetro de plantilla (\"querytemplate\") obligatorio."
 }

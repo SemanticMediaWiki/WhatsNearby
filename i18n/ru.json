@@ -19,5 +19,5 @@
 	"wnby-default-fallback-location": "Использовать привычные координаты для фолбек-позиции.",
 	"wnby-invalid-coordinates-format": "Формат привычных координат: широта, долгота.",
 	"wnby-localcache-use": "Данные полученные с локального буфера браузера.",
-	"wnby-template-parameter-missing": "Не хватает обязательного параметра шаблона."
+	"wnby-template-parameter-missing": "Не хватает обязательного параметра «querytemplate»."
 }

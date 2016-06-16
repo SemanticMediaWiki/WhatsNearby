@@ -18,5 +18,5 @@
 	"wnby-default-fallback-location": "使用默认坐标作为备选。",
 	"wnby-invalid-coordinates-format": "默认坐标格式应为纬度, 精度。",
 	"wnby-localcache-use": "数据检索自本地浏览器缓存。",
-	"wnby-template-parameter-missing": "丢失需要的模板参数。"
+	"wnby-template-parameter-missing": "丢失需要的“querytemplate”参数。"
 }

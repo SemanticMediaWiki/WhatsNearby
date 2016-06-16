@@ -18,5 +18,5 @@
 	"wnby-default-fallback-location": "ফলব্যাক হিসাবে পূর্বনির্ধারিত স্থানাঙ্ক ব্যবহৃত হচ্ছে।",
 	"wnby-invalid-coordinates-format": "ডিফল্ট স্থানাঙ্ক বিন্যাস একটি দ্রাঘিমাংশ, অক্ষাংশ আশা করছে।",
 	"wnby-localcache-use": "উপাত্ত স্থানীয় ব্রাউজারের ক্যাশে থেকে উদ্ধার করা হয়েছে।",
-	"wnby-template-parameter-missing": "একটি প্রয়োজনীয় টেমপ্লেট প্যারামিটার অনুপস্থিত।"
+	"wnby-template-parameter-missing": "একটি প্রয়োজনীয়\"querytemplate\" প্যারামিটার অনুপস্থিত।"
 }
