@@ -89,7 +89,6 @@ class HookRegistry {
 
 			$vars['whats-nearby'] = array(
 				'wgCachePrefix'  => $GLOBALS['wgCachePrefix'] === false ? wfWikiID() : $GLOBALS['wgCachePrefix'],
-				'wgLanguageCode' => $GLOBALS['wgLang']->getCode(),
 				'wnbyExternalGeoipService' => $GLOBALS['wnbyExternalGeoipService']
 			);
 
