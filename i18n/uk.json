@@ -3,7 +3,8 @@
 		"authors": [
 			"Mykola Swarnyk",
 			"Piramidion",
-			"Base"
+			"Base",
+			"Ата"
 		]
 	},
 	"wnby-desc": "Додає інформацію про позиціонування до шаблонів",
@@ -20,5 +21,5 @@
 	"wnby-default-fallback-location": "Використати звичні координати для фолбек-позиції.",
 	"wnby-invalid-coordinates-format": "Формат звичних координат: широта, довгота.",
 	"wnby-localcache-use": "Дані отримані з буфера локального переглядача.",
-	"wnby-template-parameter-missing": "Бракує обов'язкового параметра шаблону."
+	"wnby-template-parameter-missing": "Бракує обов'язкового параметра «querytemplate»."
 }
