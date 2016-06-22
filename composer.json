@@ -30,6 +30,7 @@
 	},
 	"autoload": {
 		"files" : [
+			"DefaultSettings.php",
 			"WhatsNearby.php"
 		],
 		"psr-4": {

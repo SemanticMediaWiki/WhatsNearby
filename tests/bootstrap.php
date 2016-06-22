@@ -4,7 +4,15 @@ if ( PHP_SAPI !== 'cli' ) {
 	die( 'Not an entry point' );
 }
 
-print sprintf( "\n%-20s%s\n", "Whats Nearby: ", WNBY_VERSION );
+error_reporting( E_ALL | E_STRICT );
+date_default_timezone_set( 'UTC' );
+ini_set( 'display_errors', 1 );
+
+if ( !class_exists( 'WhatsNearby' ) || ( $version = WhatsNearby::getVersion() ) === null ) {
+	die( "\Whats Nearby is not available, please check your Composer or LocalSettings.\n" );
+}
+
+print sprintf( "\n%-20s%s\n", "Whats Nearby: ", $version );
 
 if ( is_readable( $path = __DIR__ . '/../vendor/autoload.php' ) ) {
 	print sprintf( "%-20s%s\n", "MediaWiki:", $GLOBALS['wgVersion'] . " (Extension vendor autoloader)" );
@@ -17,7 +25,7 @@ if ( is_readable( $path = __DIR__ . '/../vendor/autoload.php' ) ) {
 $dateTimeUtc = new \DateTime( 'now', new \DateTimeZone( 'UTC' ) );
 print sprintf( "\n%-20s%s\n\n", "Execution time:", $dateTimeUtc->format( 'Y-m-d h:i' ) );
 
-
 $autoloader = require $path;
 $autoloader->addPsr4( 'WNBY\\Tests\\', __DIR__ . '/phpunit/Unit' );
 $autoloader->addPsr4( 'WNBY\\Tests\\Integration\\', __DIR__ . '/phpunit/Integration' );
+unset( $autoloader );
