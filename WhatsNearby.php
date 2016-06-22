@@ -21,92 +21,107 @@ if ( defined( 'WNBY_VERSION' ) ) {
 	return 1;
 }
 
-define( 'WNBY_VERSION', '1.0.0-alpha' );
+WhatsNearby::initExtension();
+
+$GLOBALS['wgExtensionFunctions'][] = function() {
+	WhatsNearby::onExtensionFunction();
+};
 
 /**
  * @codeCoverageIgnore
  */
-call_user_func( function() {
-
-	$GLOBALS['wgExtensionCredits']['parserhook'][] = array(
-		'path'           => __DIR__,
-		'name'           => 'Whats Nearby',
-		'author'         => array( 'mwjames' ),
-		'url'            => 'https://www.semantic-mediawiki.org/wiki/Extension:WhatsNearby',
-		'descriptionmsg' => 'wnby-desc',
-		'version'        => WNBY_VERSION,
-		'license-name'   => 'GPL-2.0+',
-	);
-
-	// Register message files
-	$GLOBALS['wgMessagesDirs']['whats-nearby'] = __DIR__ . '/i18n';
-	$GLOBALS['wgExtensionMessagesFiles']['whats-nearby-magic'] = __DIR__ . '/i18n/WhatsNearby.magic.php';
+class WhatsNearby {
 
 	/**
-	 * Specifies whether an external service should be used
-	 * to help with resolving a Geolocation.
-	 *
-	 * If `wnbyExternalGeoipService` is set true then
-	 * https://meta.wikimedia.org/geoiplookup is being used.
-	 *
-	 * `wnbyExternalGeoipService` can also hold an https service
-	 * provider.
+	 * @since 1.0
 	 */
-	$GLOBALS['wnbyExternalGeoipService'] = true;
+	public static function initExtension() {
 
-	$GLOBALS['wgResourceModules']['ext.whats.nearby.geoip'] = array(
-		'localBasePath' => __DIR__ ,
-		'remoteExtPath' => 'WhatsNearby',
-		'position' => 'bottom',
-		'scripts'  => array(
-			'res/ext.whats.nearby.geoip.js'
-		),
-		'targets' => array(
-			'mobile',
-			'desktop'
-		)
-	);
+		// Load DefaultSettings
+		require_once __DIR__ . '/DefaultSettings.php';
 
-	$GLOBALS['wgResourceModules']['ext.whats.nearby'] = array(
-		'localBasePath' => __DIR__ ,
-		'remoteExtPath' => 'WhatsNearby',
-		'position' => 'bottom',
-		'styles'   => array( 'res/ext.whats.nearby.css' ),
-		'scripts'  => array( 'res/ext.whats.nearby.js' ),
-		'dependencies'  => array(
-			'mediawiki.api',
-			'mediawiki.api.parse',
-			'ext.maps.services',
-			'onoi.rangeslider',
-			'onoi.blockUI',
-			'onoi.md5',
-			'onoi.blobstore'
-		),
-		'messages' => array(
-			'wnby-geolocation-disabled',
-			'wnby-geolocation-unsupported',
-			'wnby-geolocation-unknown-error',
-			'wnby-geolocation-timeout-error',
-			'wnby-geolocation-position-unavailable',
-			'wnby-geolocation-permission-denied',
-			'wnby-no-fallback-location',
-			'wnby-geolocation-geoip-fallback',
-			'wnby-geolocation-geoip-no-fallback',
-			'wnby-default-fallback-location',
-			'wnby-invalid-coordinates-format',
-			'wnby-localcache-use',
-			'wnby-template-parameter-missing',
-			'wnby-loading'
-		),
-		'targets' => array(
-			'mobile',
-			'desktop'
-		)
-	);
+		define( 'WNBY_VERSION', '1.0.0-alpha' );
 
-	$GLOBALS['wgExtensionFunctions'][] = function() {
+		$GLOBALS['wgExtensionCredits']['others'][] = array(
+			'path'           => __DIR__,
+			'name'           => 'Whats Nearby',
+			'author'         => array( 'mwjames' ),
+			'url'            => 'https://www.semantic-mediawiki.org/wiki/Extension:WhatsNearby',
+			'descriptionmsg' => 'wnby-desc',
+			'version'        => WNBY_VERSION,
+			'license-name'   => 'GPL-2.0+',
+		);
+
+		// Register message files
+		$GLOBALS['wgMessagesDirs']['WhatsNearby'] = __DIR__ . '/i18n';
+		$GLOBALS['wgExtensionMessagesFiles']['WhatsNearbyMagic'] = __DIR__ . '/i18n/WhatsNearby.magic.php';
+
+		$GLOBALS['wgResourceModules']['ext.whats.nearby.geoip'] = array(
+			'localBasePath' => __DIR__ ,
+			'remoteExtPath' => 'WhatsNearby',
+			'position' => 'bottom',
+			'scripts'  => array(
+				'res/ext.whats.nearby.geoip.js'
+			),
+			'targets' => array(
+				'mobile',
+				'desktop'
+			)
+		);
+
+		$GLOBALS['wgResourceModules']['ext.whats.nearby'] = array(
+			'localBasePath' => __DIR__ ,
+			'remoteExtPath' => 'WhatsNearby',
+			'position' => 'bottom',
+			'styles'   => array( 'res/ext.whats.nearby.css' ),
+			'scripts'  => array( 'res/ext.whats.nearby.js' ),
+			'dependencies'  => array(
+				'mediawiki.api',
+				'mediawiki.api.parse',
+				'ext.maps.services',
+				'onoi.rangeslider',
+				'onoi.blockUI',
+				'onoi.md5',
+				'onoi.blobstore'
+			),
+			'messages' => array(
+				'wnby-geolocation-disabled',
+				'wnby-geolocation-unsupported',
+				'wnby-geolocation-unknown-error',
+				'wnby-geolocation-timeout-error',
+				'wnby-geolocation-position-unavailable',
+				'wnby-geolocation-permission-denied',
+				'wnby-no-fallback-location',
+				'wnby-geolocation-geoip-fallback',
+				'wnby-geolocation-geoip-no-fallback',
+				'wnby-default-fallback-location',
+				'wnby-invalid-coordinates-format',
+				'wnby-localcache-use',
+				'wnby-template-parameter-missing',
+				'wnby-loading'
+			),
+			'targets' => array(
+				'mobile',
+				'desktop'
+			)
+		);
+	}
+
+	/**
+	 * @since 1.0
+	 */
+	public static function onExtensionFunction() {
 		$hookRegistry = new HookRegistry();
 		$hookRegistry->register();
-	};
+	}
 
-} );
+	/**
+	 * @since 1.0
+	 *
+	 * @return string|null
+	 */
+	public static function getVersion() {
+		return WNBY_VERSION;
+	}
+
+}

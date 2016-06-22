@@ -66,19 +66,8 @@ displayed for a geolocation.
 }}
 ```
 
-Detailed information about the `#nearby` parser function and some template examples
+Detailed information about the `#nearby` parser function and how to make use of templates
 can be found [here](docs/README.md).
-
-### Geolocation
-
-`Whats Nearby` tries to determine the geolocation by first using the [HTML5 detection][geoloc]
-mechanism and if this fails and `$GLOBALS['wnbyExternalGeoipService']` is enabled
-then `meta.wikimedia.org/geoiplookup` is being pinged to resolve coordinates on behalf
-of the browser IP address.
-
-If above methods did not return any meaningful response and where the `coordinates`
-parameter has been given information then those coordinates are used as
-default fallback for computing distance queries.
 
 ## Contribution and support
 

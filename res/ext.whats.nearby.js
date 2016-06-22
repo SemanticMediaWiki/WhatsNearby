@@ -493,8 +493,8 @@
 				new maps.services( $( this ) ),
 				new onoi.blobstore(
 					'whats-nearby' +  ':' +
-					mw.config.get( 'wgUserLanguage' ) + ':' +
-					mw.config.get( 'wgCookiePrefix' )
+					mw.config.get( 'wgCookiePrefix' ) + ':' +
+					mw.config.get( 'wgUserLanguage' )
 				)
 			);
 
