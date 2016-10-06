@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"wnby-desc": "Apurre información de deteición de la xeollocalización a les plantiyes",
+	"wnby-loading": "Cargando...",
+	"wnby-geolocation-disabled": "L'usuariu desactivó la deteición de xeollocalización.",
+	"wnby-geolocation-unsupported": "Esti navegador nun almite la deteición de xeollocalización.",
+	"wnby-geolocation-unknown-error": "Hebo un error desconocíu.",
+	"wnby-geolocation-timeout-error": "Escosó'l tiempu d'espera de la solicitú pa recibir l'allugamientu del usuariu.",
+	"wnby-geolocation-position-unavailable": "Nun ta disponible la información de xeollocalización.",
+	"wnby-geolocation-permission-denied": "L'usuariu refugó la solicitú de xeollocalización.",
+	"wnby-geolocation-geoip-fallback": "Les coordenaes de xeollocalización ($1, $2) resolvióles un serviciu [https://en.wikipedia.org/wiki/IP_address_location d'allugamientu de direcciones IP] esternu.",
+	"wnby-geolocation-geoip-no-fallback": "Falló l'intentu de resolver les coordenaes de xeollocalización ($1,$2) dende un serviciu esternu.",
+	"wnby-no-fallback-location": "Nun ta disponible un allugamientu de reserva.",
+	"wnby-default-fallback-location": "Usando les coordenaes predeterminaes como reserva.",
+	"wnby-invalid-coordinates-format": "El formatu de coordenaes predetermináu espera una llatitú, llonxitú.",
+	"wnby-localcache-use": "Los datos recuperáronse de la caché llocal del navegador.",
+	"wnby-template-parameter-missing": "Falta un parámetru obligatoriu de la plantiya «querytemplate»."
+}
