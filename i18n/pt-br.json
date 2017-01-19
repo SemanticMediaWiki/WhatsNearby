@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"HenriqueCrang"
+		]
+	},
+	"wnby-desc": "Fornece informação de detecção de geolocalização para templates",
+	"wnby-loading": "Carregando ...",
+	"wnby-geolocation-disabled": "Detecção de geolocalização foi desabilitada pelo usuário.",
+	"wnby-geolocation-unsupported": "Detecção de geolocalização não é suportada por esse navegador.",
+	"wnby-geolocation-unknown-error": "Ocorreu um erro desconhecido.",
+	"wnby-geolocation-timeout-error": "A requisição pela localização do usuário excedeu o tempo limite.",
+	"wnby-geolocation-position-unavailable": "Informação de geolocalização não está disponível.",
+	"wnby-geolocation-permission-denied": "Usuário negou a solicitação de geolocalização.",
+	"wnby-geolocation-geoip-fallback": "Coordenadas geolocalizadas ($1,$2) foram resolvidas por um serviço externo de [https://en.wikipedia.org/wiki/IP_address_location IP localização de endereços].",
+	"wnby-geolocation-geoip-no-fallback": "Uma tentativa de resolver as coordenadas geolocalizadas ($1,$2) de um serviço externo não foi bem sucedida.",
+	"wnby-no-fallback-location": "Nenhum localização padrão está disponível.",
+	"wnby-default-fallback-location": "Usando coordenadas padrão como backup.",
+	"wnby-invalid-coordinates-format": "O formato padrão de coordenadas espera latitude, longitude.",
+	"wnby-localcache-use": "Dados foram recuperados do cache local do navegador.",
+	"wnby-template-parameter-missing": "Um parâmetro obrigatório \"querytemplate\" não foi encontrado."
+}
