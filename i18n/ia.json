@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"wnby-desc": "Forni information de detection per geolocalisation a patronos",
+	"wnby-loading": "Cargamento...",
+	"wnby-geolocation-disabled": "Le detection per geolocalisation ha essite disactivate per le usator.",
+	"wnby-geolocation-unsupported": "Le detection per geolocalisation non es supportate per iste navigator.",
+	"wnby-geolocation-unknown-error": "Un error incognite ha occurrite.",
+	"wnby-geolocation-timeout-error": "Le requesta de obtener le loco del usator ha expirate.",
+	"wnby-geolocation-position-unavailable": "Information de geolocalisation es indisponibile.",
+	"wnby-geolocation-permission-denied": "Le usator ha refusate le requesta de geolocalisation.",
+	"wnby-geolocation-geoip-fallback": "Le coordinatas de geolocalisation ($1, $2) ha essite resolvite per un servicio externe de [https://en.wikipedia.org/wiki/IP_address_location localisation de adresses IP].",
+	"wnby-geolocation-geoip-no-fallback": "Un tentativa de resolver le coordinatas de geolocalisation ($1, $2) per medio de un servicio externe non ha succedite.",
+	"wnby-no-fallback-location": "Nulle loco de reserva es disponibile.",
+	"wnby-default-fallback-location": "Uso del coordinatas predefinite como recurso.",
+	"wnby-invalid-coordinates-format": "Le formato del coordinatas predefinite expecta un latitude, longitude.",
+	"wnby-localcache-use": "Le datos ha essite recuperate ab le cache local del navigator.",
+	"wnby-template-parameter-missing": "Manca un parametro obligatori \"querytemplate\"."
+}
