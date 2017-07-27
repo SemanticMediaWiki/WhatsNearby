@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
-			"Selven"
+			"Selven",
+			"Lucas2"
 		]
 	},
 	"wnby-desc": "Fornisce rilevamento di informazioni di geolocalizzazione ai template",
@@ -16,6 +17,6 @@
 	"wnby-geolocation-geoip-fallback": "Le coordinate di geolocalizzazione ($1, $2) sono state risolte da un servizio esterno di [https://en.wikipedia.org/wiki/IP_address_location localizzazione dell'indirizzo IP] .",
 	"wnby-geolocation-geoip-no-fallback": "Un tentativo di risolvere le coordinate geografiche ($1, $2) da un servizio esterno non è riuscito.",
 	"wnby-invalid-coordinates-format": "Il formato predefinito delle coordinate si aspetta latitudine, longitudine.",
-	"wnby-localcache-use": "I dati sono stati recuperati dalla cache del browser locale.",
+	"wnby-localcache-use": "I dati sono stati recuperati dalla cache locale del browser.",
 	"wnby-template-parameter-missing": "Un parametro obbligatorio \"querytemplate\" è mancante."
 }
