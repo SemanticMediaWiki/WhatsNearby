@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jonghaya",
+			"Ykhwong"
+		]
+	},
+	"wnby-loading": "불러오는 중 ...",
+	"wnby-geolocation-disabled": "지리 위치 검색이 사용자에 의해 비활성화되었습니다.",
+	"wnby-geolocation-unsupported": "지리 위치 검색은 이 브라우저가 지원하지 않습니다.",
+	"wnby-geolocation-unknown-error": "알 수 없는 오류가 발생했습니다.",
+	"wnby-geolocation-timeout-error": "사용자 위치를 가져오는 요청 시간이 초과되었습니다.",
+	"wnby-geolocation-position-unavailable": "지리 위치 정보를 사용할 수 없습니다.",
+	"wnby-geolocation-permission-denied": "사용자는 지리 위치를 위한 요청을 거절했습니다.",
+	"wnby-template-parameter-missing": "필수적인 “쿼리템플릿” 파라메터가 없습니다."
+}
