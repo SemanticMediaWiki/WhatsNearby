@@ -5,7 +5,6 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/SemanticMediaWiki/WhatsNearby/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/SemanticMediaWiki/WhatsNearby/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/mediawiki/whats-nearby/version.png)](https://packagist.org/packages/mediawiki/whats-nearby)
 [![Packagist download count](https://poser.pugx.org/mediawiki/whats-nearby/d/total.png)](https://packagist.org/packages/mediawiki/whats-nearby)
-[![Dependency Status](https://www.versioneye.com/php/mediawiki:whats-nearby/badge.png)](https://www.versioneye.com/php/mediawiki:whats-nearby)
 
 Whats Nearby is a small extension that adds geolocation (HTML5) detection information
 to templates in order for [`#ask`][smw] distance queries to generate adaptive content.
@@ -76,7 +75,7 @@ have a look at the contribution guideline.
 
 * [File an issue](https://github.com/SemanticMediaWiki/WhatsNearby/issues)
 * [Submit a pull request](https://github.com/SemanticMediaWiki/WhatsNearby/pulls)
-* Ask a question on [the mailing list](https://semantic-mediawiki.org/wiki/Mailing_list)
+* Ask a question on [the mailing list](https://www.semantic-mediawiki.org/wiki/Mailing_list)
 * Ask a question on the #semantic-mediawiki IRC channel on Freenode.
 
 ## Tests
