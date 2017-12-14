@@ -18,7 +18,7 @@
 	"wnby-geolocation-geoip-fallback": "Las coordenadas de geolocalización ($1, $2) se resolvieron por un servicio [https://en.wikipedia.org/wiki/IP_address_location ubicación de direcciones IP] externo.",
 	"wnby-geolocation-geoip-no-fallback": "El intento de resolver las coordenadas de geolocalización ($1, $2) provenientes de un servicio externo no tuvo éxito.",
 	"wnby-no-fallback-location": "No hay reserva de ubicación está disponible.",
-	"wnby-default-fallback-location": "El uso de las coordenadas por defecto como retroceso.",
+	"wnby-default-fallback-location": "Se utilizan las coordenadas predeterminadas como reserva.",
 	"wnby-invalid-coordinates-format": "El formato de coordenadas predeterminado espera una latitud, longitud.",
 	"wnby-localcache-use": "Los datos se recuperaron de la antememoria local del navegador.",
 	"wnby-template-parameter-missing": "Falta un parámetro de plantilla (\"querytemplate\") obligatorio."
