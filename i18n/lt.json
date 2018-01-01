@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eitvys200",
+			"Manvydasz"
+		]
+	},
+	"wnby-desc": "Pateikia geografinės vietos nustatymo informaciją šablonams",
+	"wnby-loading": "Įkeliama …",
+	"wnby-geolocation-disabled": "Naudotojas išjungė geografinės padėties nustatymą.",
+	"wnby-geolocation-unsupported": "Ši naršyklė nepalaiko geografinės padėties nustatymo.",
+	"wnby-geolocation-unknown-error": "Įvyko nežinoma klaida.",
+	"wnby-geolocation-timeout-error": "Prašymas gauti naudotojo buvimo vietą baigėsi.",
+	"wnby-geolocation-position-unavailable": "Geografinės vietos informacija neprieinama.",
+	"wnby-geolocation-permission-denied": "Vartotojas atmetė prašymą dėl geografinės buvimo vietos nustatymo.",
+	"wnby-localcache-use": "Duomenys buvo paimti iš vietos naršyklės talpyklos.",
+	"wnby-template-parameter-missing": "Trūksta reikalaujamo parametro \"querytemplate\"."
+}
