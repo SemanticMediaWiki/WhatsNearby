@@ -45,11 +45,13 @@ class WhatsNearby {
 		$GLOBALS['wgExtensionCredits']['others'][] = array(
 			'path'           => __FILE__,
 			'name'           => 'Whats Nearby',
-			'author'         => array( 'James Hong Kong' ),
+			'author'         => array(
+				'James Hong Kong'
+			),
 			'url'            => 'https://www.semantic-mediawiki.org/wiki/Extension:WhatsNearby',
 			'descriptionmsg' => 'wnby-desc',
 			'version'        => WNBY_VERSION,
-			'license-name'   => 'GPL-2.0+',
+			'license-name'   => 'GPL-2.0-or-later'
 		);
 
 		// Register message files
@@ -73,8 +75,12 @@ class WhatsNearby {
 			'localBasePath' => __DIR__ ,
 			'remoteExtPath' => 'WhatsNearby',
 			'position' => 'bottom',
-			'styles'   => array( 'res/ext.whats.nearby.css' ),
-			'scripts'  => array( 'res/ext.whats.nearby.js' ),
+			'styles'   => array(
+				'res/ext.whats.nearby.css'
+			),
+			'scripts'  => array(
+				'res/ext.whats.nearby.js'
+			),
 			'dependencies'  => array(
 				'mediawiki.api',
 				'mediawiki.api.parse',
