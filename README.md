@@ -21,9 +21,9 @@ Privacy: This extension makes actively use of the HTML5 geolocation feature in c
 
 ## Requirements
 
-- PHP 5.3.2 or later
-- MediaWiki 1.23 or later
-- [Maps][maps] 3.5 or later
+- PHP 5.5 or later
+- MediaWiki 1.27 or later
+- [Maps][maps] 4.3 or later
 
 ## Installation
 
