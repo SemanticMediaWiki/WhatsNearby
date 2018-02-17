@@ -57,14 +57,11 @@ class NearbyParserFunctionTest extends \PHPUnit_Framework_TestCase {
 			->disableOriginalConstructor()
 			->getMock();
 
-		$parserOutput->expects( $this->atLeastOnce() )
-			->method( 'addHeadItem' );
-
 		$parser = $this->getMockBuilder( '\Parser' )
 			->disableOriginalConstructor()
 			->getMock();
 
-		$parser->expects( $this->any() )
+		$parser->expects( $this->atLeastOnce() )
 			->method( 'getOutput' )
 			->will( $this->returnValue( $parserOutput ) );
 

@@ -48,7 +48,7 @@ class NearbyParserFunction {
 			$this->doValidateKeyValueForParameterMatch( $key, $value, $class, $parameters );
 		}
 
-		$this->addMapServicesToOutput( $parameters );
+		$this->addMapServices( $parameters );
 		$geoip = true;
 
 		if ( isset( $parameters['nolocation'] ) ||
@@ -108,7 +108,7 @@ class NearbyParserFunction {
 		$parameters[strtolower( $k )] = $v;
 	}
 
-	private function addMapServicesToOutput( &$parameters ) {
+	private function addMapServices( &$parameters ) {
 
 		if ( isset( $parameters['format'] ) &&
 			in_array( $parameters['format'], array( 'openlayers', 'leaflet', 'googlemaps', 'googlemaps3', 'maps', 'google' ) ) ) {
@@ -119,10 +119,12 @@ class NearbyParserFunction {
 			return;
 		}
 
+		$parserOutput =  $this->parser->getOutput();
+
 		if ( $parameters['maps'] === 'openlayers' ) {
 			$mapsOpenLayers = MapsMappingServices::getServiceInstance( 'openlayers' );
-			$mapsOpenLayers->addDependencies( $this->parser );
-			$this->parser->getOutput()->addJsConfigVars( $mapsOpenLayers->getConfigVariables() );
+			$mapsOpenLayers->addDependencies( $parserOutput );
+			$parserOutput->addJsConfigVars( $mapsOpenLayers->getConfigVariables() );
 		}
 
 		if (
@@ -131,12 +133,12 @@ class NearbyParserFunction {
 			$parameters['maps'] === 'maps' ||
 			$parameters['maps'] === 'google' ) {
 			$mapsGoogleMaps = MapsMappingServices::getServiceInstance( 'googlemaps3' );
-			$mapsGoogleMaps->addDependencies( $this->parser );
+			$mapsGoogleMaps->addDependencies( $parserOutput );
 		}
 
 		if ( $parameters['maps'] === 'leaflet' || $parameters['maps'] === 'leafletmaps' ) {
 			$mapsLeaflet = MapsMappingServices::getServiceInstance( 'leaflet' );
-			$mapsLeaflet->addDependencies( $this->parser );
+			$mapsLeaflet->addDependencies( $parserOutput );
 		}
 	}
 
