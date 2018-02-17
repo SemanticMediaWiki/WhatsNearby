@@ -6,13 +6,13 @@ language: php
 matrix:
   fast_finish: true
   include:
-    - env: DB=mysql; MW=1.25.6; TYPE=coverage
+    - env: DB=mysql; MW=REL1_27; TYPE=coverage
       php: 5.6
-    - env: DB=sqlite; MW=1.23.6;
-      php: 5.4
-    - env: DB=mysql; MW=1.26.3
+    - env: DB=sqlite; MW=REL1_27; PHPUNIT=4.8.*
+      php: 5.5
+    - env: DB=mysql; MW=REL1_27
       php: hhvm
-    - env: DB=mysql; MW=master
+    - env: DB=mysql; MW=master; PHPUNIT=5.7.*
       php: 7
 
 install:
