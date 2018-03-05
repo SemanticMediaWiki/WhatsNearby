@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد",
+			"محمد أحمد عبد الفتاح"
+		]
+	},
+	"wnby-desc": "يوفر معلومات الكشف عن الموقع الجغرافي إلى القوالب",
+	"wnby-loading": "تحميل ...",
+	"wnby-geolocation-disabled": "تم تعطيل الكشف عن تحديد الموقع الجغرافي من قبل المستخدم.",
+	"wnby-geolocation-unsupported": "لا يتم دعم الكشف عن تحديد الموقع الجغرافي بواسطة هذا المتصفح.",
+	"wnby-geolocation-unknown-error": "حدث خطأ غير معروف.",
+	"wnby-geolocation-timeout-error": "انتهت صلاحية طلب الحصول على موقع المستخدم.",
+	"wnby-geolocation-position-unavailable": "معلومات تحديد الموقع الجغرافي غير متوفرة.",
+	"wnby-geolocation-permission-denied": "رفض المستخدم طلب تحديد الموقع الجغرافي.",
+	"wnby-geolocation-geoip-fallback": "تم حل إحداثيات تحديد الموقع الجغرافي ($1، $2) بواسطة خدمة [https://en.wikipedia.org/wiki/IP_address_location موقع عنوان آيبي] خارجية.",
+	"wnby-geolocation-geoip-no-fallback": "لم تنجح محاولة حل إحداثيات تحديد الموقع الجغرافي ($1 ،$2) من خدمة خارجية.",
+	"wnby-no-fallback-location": "لا يوجد موقع احتياطي متاح.",
+	"wnby-default-fallback-location": "استخدام الإحداثيات الافتراضية كاحتياطية.",
+	"wnby-invalid-coordinates-format": "تنسيق الإحداثيات الافتراضي يتوقع خطوط الطول والعرض.",
+	"wnby-localcache-use": "تم استرداد البيانات من ذاكرة التخزين المؤقت للمتصفح المحلي.",
+	"wnby-template-parameter-missing": "وسيط \"قالب الاستعلام\" مطلوب مفقود."
+}
