@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly",
+			"Liuxinyu970226"
+		]
+	},
+	"wnby-desc": "提供地理位置檢測訊息至模板裡",
+	"wnby-loading": "讀取中...",
+	"wnby-geolocation-disabled": "地理位置檢測已被使用者停用。",
+	"wnby-geolocation-unsupported": "此瀏覽器不支援地理位置檢測。",
+	"wnby-geolocation-unknown-error": "發生不明錯誤。",
+	"wnby-geolocation-timeout-error": "請求取得使用者位置逾時。",
+	"wnby-geolocation-position-unavailable": "地理位置檢測訊息不可用。",
+	"wnby-geolocation-permission-denied": "使用者拒絕了地理位置檢測請求。",
+	"wnby-geolocation-geoip-fallback": "地理位置座標（$1、$2）已由外部的\n[https://en.wikipedia.org/wiki/IP_address_location IP 地址位置]服務所處理。",
+	"wnby-geolocation-geoip-no-fallback": "嘗試以外部服務處理地理位置座標（$1、$2）失敗。",
+	"wnby-no-fallback-location": "沒有可用的備用位置。",
+	"wnby-default-fallback-location": "使用預設座標為備用。",
+	"wnby-invalid-coordinates-format": "預設座標格式需是經緯度。",
+	"wnby-localcache-use": "自本地端瀏覽器快取的資料索取。",
+	"wnby-template-parameter-missing": "所需要的 \"querytemplate\" 參數遺失。"
+}
