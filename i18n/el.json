@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nikosgranturismogt"
+		]
+	},
+	"wnby-desc": "Παρέχει πληροφορίες εντόπισης γεωτοποθεσίας σε πρότυπα",
+	"wnby-loading": "Φόρτωση...",
+	"wnby-geolocation-unknown-error": "Προέκυψε ένα άγνωστο σφάλμα.",
+	"wnby-geolocation-position-unavailable": "Οι πληροφορίες γεωτοποθεσίας δεν είναι διαθέσιμες."
+}
