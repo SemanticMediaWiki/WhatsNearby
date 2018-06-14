@@ -5,6 +5,7 @@
 			"Ykhwong"
 		]
 	},
+	"wnby-desc": "지리 위치 탐지 정보를 틀에 제공합니다",
 	"wnby-loading": "불러오는 중 ...",
 	"wnby-geolocation-disabled": "지리 위치 검색이 사용자에 의해 비활성화되었습니다.",
 	"wnby-geolocation-unsupported": "지리 위치 검색은 이 브라우저가 지원하지 않습니다.",
@@ -12,5 +13,9 @@
 	"wnby-geolocation-timeout-error": "사용자 위치를 가져오는 요청 시간이 초과되었습니다.",
 	"wnby-geolocation-position-unavailable": "지리 위치 정보를 사용할 수 없습니다.",
 	"wnby-geolocation-permission-denied": "사용자는 지리 위치를 위한 요청을 거절했습니다.",
+	"wnby-geolocation-geoip-fallback": "지리 좌표($1, $2)는 외부 [https://en.wikipedia.org/wiki/IP_address_location IP 주소 위치] 서비스를 통해 결정되었습니다.",
+	"wnby-geolocation-geoip-no-fallback": "외부 서비스로부터 지리 좌표($1, $2)를 결정하려고 시도했으나 성공하지 못했습니다.",
+	"wnby-invalid-coordinates-format": "기본 좌표는 위도와 경도를 예측합니다.",
+	"wnby-localcache-use": "데이터는 로컬 브라우저 캐시에서 가져왔습니다.",
 	"wnby-template-parameter-missing": "필수적인 “쿼리템플릿” 파라메터가 없습니다."
 }

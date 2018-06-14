@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps"
+		]
+	},
+	"wnby-loading": "Ładowanie...",
+	"wnby-geolocation-disabled": "Wykrywanie geolokalizacji zostało wyłączone przez użytkownika.",
+	"wnby-geolocation-unsupported": "Wykrywanie geolokalizacji nie jest obsługiwane przez tę przeglądarkę.",
+	"wnby-geolocation-unknown-error": "Wystąpił nieznany błąd.",
+	"wnby-geolocation-position-unavailable": "Informacje geolokalizacyjne są niedostępne.",
+	"wnby-template-parameter-missing": "Brakuje obowiązkowego parametru „querytemplate”."
+}
