@@ -9,5 +9,7 @@
 	"wnby-geolocation-unsupported": "Wykrywanie geolokalizacji nie jest obsługiwane przez tę przeglądarkę.",
 	"wnby-geolocation-unknown-error": "Wystąpił nieznany błąd.",
 	"wnby-geolocation-position-unavailable": "Informacje geolokalizacyjne są niedostępne.",
+	"wnby-invalid-coordinates-format": "Domyślny format współrzędnych oczekuje szerokości i długości geograficznej.",
+	"wnby-localcache-use": "Dane zostały pobrane z pamięci podręcznej przeglądarki.",
 	"wnby-template-parameter-missing": "Brakuje obowiązkowego parametru „querytemplate”."
 }
