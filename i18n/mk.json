@@ -18,5 +18,5 @@
 	"wnby-default-fallback-location": "Ќе се користат основно зададените координати.",
 	"wnby-invalid-coordinates-format": "Основно зададените координати треба да бидат во формат со геог. ширина и должина.",
 	"wnby-localcache-use": "Податоците се добиени од месниот прелистувачки меѓусклад.",
-	"wnby-template-parameter-missing": "Недостасува задолжителен шаблонски параметар."
+	"wnby-template-parameter-missing": "Недостасува задолжителниот параметар „querytemplate“."
 }
