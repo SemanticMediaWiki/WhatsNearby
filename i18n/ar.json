@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"ديفيد",
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"Meno25"
 		]
 	},
 	"wnby-desc": "يوفر معلومات الكشف عن الموقع الجغرافي إلى القوالب",
@@ -13,7 +14,7 @@
 	"wnby-geolocation-timeout-error": "انتهت صلاحية طلب الحصول على موقع المستخدم.",
 	"wnby-geolocation-position-unavailable": "معلومات تحديد الموقع الجغرافي غير متوفرة.",
 	"wnby-geolocation-permission-denied": "رفض المستخدم طلب تحديد الموقع الجغرافي.",
-	"wnby-geolocation-geoip-fallback": "تم حل إحداثيات تحديد الموقع الجغرافي ($1، $2) بواسطة خدمة [https://en.wikipedia.org/wiki/IP_address_location موقع عنوان آيبي] خارجية.",
+	"wnby-geolocation-geoip-fallback": "تم حل إحداثيات تحديد الموقع الجغرافي ($1، $2) بواسطة خدمة [https://en.wikipedia.org/wiki/IP_address_location موقع عنوان أيبي] خارجية.",
 	"wnby-geolocation-geoip-no-fallback": "لم تنجح محاولة حل إحداثيات تحديد الموقع الجغرافي ($1 ،$2) من خدمة خارجية.",
 	"wnby-no-fallback-location": "لا يوجد موقع احتياطي متاح.",
 	"wnby-default-fallback-location": "استخدام الإحداثيات الافتراضية كاحتياطية.",
