@@ -2,8 +2,10 @@
 
 namespace WNBY;
 
+use Maps\MappingService;
+use Maps\MappingServices;
+use Maps\MapsFactory;
 use Parser;
-use MapsMappingServices;
 use Html;
 
 /**
@@ -115,31 +117,23 @@ class NearbyParserFunction {
 			$parameters['maps'] = $parameters['format'];
 		}
 
-		if ( !isset( $parameters['maps'] ) || !class_exists( 'MapsMappingServices' ) ) {
+		if ( !isset( $parameters['maps'] ) || !class_exists( MappingServices::class ) ) {
 			return;
 		}
 
-		$parserOutput =  $this->parser->getOutput();
+		$services = MapsFactory::globalInstance()->getMappingServices();
 
-		if ( $parameters['maps'] === 'openlayers' ) {
-			$mapsOpenLayers = MapsMappingServices::getServiceInstance( 'openlayers' );
-			$mapsOpenLayers->addDependencies( $parserOutput );
-			$parserOutput->addJsConfigVars( $mapsOpenLayers->getConfigVariables() );
+		if ( $services->nameIsKnown( $parameters['maps'] ) ) {
+			$this->addMappingServiceDependencies(
+				$services->getService( $parameters['maps'] ),
+				$parameters
+			);
 		}
+	}
 
-		if (
-			$parameters['maps'] === 'googlemaps' ||
-			$parameters['maps'] === 'googlemaps3' ||
-			$parameters['maps'] === 'maps' ||
-			$parameters['maps'] === 'google' ) {
-			$mapsGoogleMaps = MapsMappingServices::getServiceInstance( 'googlemaps3' );
-			$mapsGoogleMaps->addDependencies( $parserOutput );
-		}
-
-		if ( $parameters['maps'] === 'leaflet' || $parameters['maps'] === 'leafletmaps' ) {
-			$mapsLeaflet = MapsMappingServices::getServiceInstance( 'leaflet' );
-			$mapsLeaflet->addDependencies( $parserOutput );
-		}
+	private function addMappingServiceDependencies( MappingService $service, array $parameters ) {
+		$this->parser->getOutput()->addHeadItem( $service->getDependencyHtml( $parameters ) );
+		$this->parser->getOutput()->addModules( $service->getResourceModules() );
 	}
 
 }
