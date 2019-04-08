@@ -2,6 +2,7 @@
 
 namespace WNBY\Tests;
 
+use PHPUnit\Framework\TestCase;
 use WNBY\ParserFunctionFactory;
 
 /**
@@ -13,7 +14,7 @@ use WNBY\ParserFunctionFactory;
  *
  * @author mwjames
  */
-class ParserFunctionFactoryTest extends \PHPUnit_Framework_TestCase {
+class ParserFunctionFactoryTest extends TestCase {
 
 	public function testCanConstruct() {
 

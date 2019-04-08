@@ -2,6 +2,7 @@
 
 namespace WNBY\Tests;
 
+use PHPUnit\Framework\TestCase;
 use WNBY\HookRegistry;
 use Title;
 
@@ -14,7 +15,7 @@ use Title;
  *
  * @author mwjames
  */
-class HookRegistryTest extends \PHPUnit_Framework_TestCase {
+class HookRegistryTest extends TestCase {
 
 	public function testCanConstruct() {
 

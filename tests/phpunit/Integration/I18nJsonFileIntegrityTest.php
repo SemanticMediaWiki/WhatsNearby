@@ -2,6 +2,8 @@
 
 namespace WNBY\Tests\Integration;
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * @group whats-nearby
  * @group medium
@@ -11,7 +13,7 @@ namespace WNBY\Tests\Integration;
  *
  * @author mwjames
  */
-class I18nJsonFileIntegrityTest extends \PHPUnit_Framework_TestCase {
+class I18nJsonFileIntegrityTest extends TestCase {
 
 	/**
 	 * @dataProvider i18nFileProvider

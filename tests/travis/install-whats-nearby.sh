@@ -14,7 +14,7 @@ function installToMediaWikiRoot {
 	then
 		composer require 'phpunit/phpunit='$PHPUNIT --update-with-dependencies
 	else
-		composer require 'phpunit/phpunit=3.7.*' --update-with-dependencies
+		composer require 'phpunit/phpunit=7.5.*' --update-with-dependencies
 	fi
 
 	if [ "$WNBY" != "" ]

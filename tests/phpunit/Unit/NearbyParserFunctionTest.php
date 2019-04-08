@@ -2,6 +2,7 @@
 
 namespace WNBY\Tests;
 
+use PHPUnit\Framework\TestCase;
 use WNBY\NearbyParserFunction;
 
 /**
@@ -13,7 +14,7 @@ use WNBY\NearbyParserFunction;
  *
  * @author mwjames
  */
-class NearbyParserFunctionTest extends \PHPUnit_Framework_TestCase {
+class NearbyParserFunctionTest extends TestCase {
 
 	public function testCanConstruct() {
 
