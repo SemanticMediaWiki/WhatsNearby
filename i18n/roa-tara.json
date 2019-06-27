@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"wnby-desc": "Dèje 'u relevamende de 'mbormaziune de geolocalizzazzione a le template",
+	"wnby-loading": "Stoche a careche…",
+	"wnby-geolocation-disabled": "'U relevamende d'a geolocalizzazzione ha state disattivate da l'utende.",
+	"wnby-geolocation-unsupported": "'U relevamende d'a geolocalizzazzione non g'è supportate da stu browser.",
+	"wnby-geolocation-unknown-error": "'N'errore scanusciute s'a verificate.",
+	"wnby-geolocation-timeout-error": "'A richieste pe avè 'a posizione de l'utende ave scadute.",
+	"wnby-geolocation-position-unavailable": "Le 'mbormaziune d'a geolocalizzazzione non ge sò disponibbele.",
+	"wnby-geolocation-permission-denied": "L'utende ave negate 'a richieste de geolocalizzazzione.",
+	"wnby-geolocation-geoip-fallback": "Le coordinate de geolocalizzazzione ($1, $2) onne stata resolte da 'nu servizie de fore de [https://en.wikipedia.org/wiki/IP_address_location localizzazzione d'u 'nderizze IP] .",
+	"wnby-geolocation-geoip-no-fallback": "'Nu tendative de resolvere le coordinate sciugrafeche ($1, $2) da 'nu servizie de fore non g'ave riuscite.",
+	"wnby-no-fallback-location": "Non g'è disponibbele nisciuna posizione de fallback.",
+	"wnby-default-fallback-location": "Stoche ause le coordinate predefinitive cumme fallback.",
+	"wnby-invalid-coordinates-format": "'U formate predefinite de le coordinate se aspette latitudine e longitudine.",
+	"wnby-localcache-use": "Le date onne state recuperate da 'a cache locale d'u browser.",
+	"wnby-template-parameter-missing": "'Nu parametre obbligatorije \"querytemplate\" manghe."
+}
