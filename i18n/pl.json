@@ -1,14 +1,21 @@
 {
 	"@metadata": {
 		"authors": [
-			"Chrumps"
+			"Chrumps",
+			"Railfail536"
 		]
 	},
+	"wnby-desc": "Wprowadza informacje geolokalizacyjne do szablonów",
 	"wnby-loading": "Ładowanie...",
 	"wnby-geolocation-disabled": "Wykrywanie geolokalizacji zostało wyłączone przez użytkownika.",
 	"wnby-geolocation-unsupported": "Wykrywanie geolokalizacji nie jest obsługiwane przez tę przeglądarkę.",
 	"wnby-geolocation-unknown-error": "Wystąpił nieznany błąd.",
+	"wnby-geolocation-timeout-error": "Upłynął czas oczekiwania na żądanie lokalizacji użytkownika.",
 	"wnby-geolocation-position-unavailable": "Informacje geolokalizacyjne są niedostępne.",
+	"wnby-geolocation-permission-denied": "Użytkownik odrzucił żądanie geolokalizacji.",
+	"wnby-geolocation-geoip-no-fallback": "Próba pobrania koordynatów geolokalizacyjnych ($1, $2) z zewnętrznej usługi nie powiodła się.",
+	"wnby-no-fallback-location": "Żadna zapasowa lokalizacja nie jest dostępna.",
+	"wnby-default-fallback-location": "Użyto zapasowych, domyślnych koordynatów.",
 	"wnby-invalid-coordinates-format": "Domyślny format współrzędnych oczekuje szerokości i długości geograficznej.",
 	"wnby-localcache-use": "Dane zostały pobrane z pamięci podręcznej przeglądarki.",
 	"wnby-template-parameter-missing": "Brakuje obowiązkowego parametru „querytemplate”."
