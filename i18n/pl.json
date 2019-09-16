@@ -14,6 +14,7 @@
 	"wnby-geolocation-timeout-error": "Upłynął czas oczekiwania na żądanie lokalizacji użytkownika.",
 	"wnby-geolocation-position-unavailable": "Informacje geolokalizacyjne są niedostępne.",
 	"wnby-geolocation-permission-denied": "Użytkownik odrzucił żądanie geolokalizacji.",
+	"wnby-geolocation-geoip-fallback": "Współrzędne geolokalizacji ($1, $2) zostały przetworzone przez zewnętrzną usługę [https://en.wikipedia.org/wiki/IP_address_location lokalizowania adresów IP].",
 	"wnby-geolocation-geoip-no-fallback": "Próba pobrania koordynatów geolokalizacyjnych ($1, $2) z zewnętrznej usługi nie powiodła się.",
 	"wnby-no-fallback-location": "Żadna zapasowa lokalizacja nie jest dostępna.",
 	"wnby-default-fallback-location": "Użyto zapasowych, domyślnych koordynatów.",
