@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"wnby-desc": "Gir geolokaliseringsinformasjon til maler",
+	"wnby-loading": "Laster ...",
+	"wnby-geolocation-disabled": "Geolokalisering ble slått av av brukeren.",
+	"wnby-geolocation-unsupported": "Geolokalisering støttes ikke av denne nettleseren.",
+	"wnby-geolocation-unknown-error": "En ukjent feil oppsto.",
+	"wnby-geolocation-timeout-error": "Forespørselen om å hente brukerens beliggenhet fikk et tidsavbrudd.",
+	"wnby-geolocation-position-unavailable": "Geolokaliseringsinformasjon er utilgjengelig.",
+	"wnby-geolocation-permission-denied": "Brukeren avviste forespørselen om geolokalisering.",
+	"wnby-geolocation-geoip-fallback": "Geolokaliseringskoordinater ($1, $2) ble løst av en ekstern [https://en.wikipedia.org/wiki/IP_address_location lokaliseringstjeneste for IP-adresser].",
+	"wnby-geolocation-geoip-no-fallback": "Et forsøk på å løse geolokaliseringskoordinater ($1, $2) fra en ekstern tjeneste lyktes ikke.",
+	"wnby-no-fallback-location": "Intet reservested er tilgjengelig.",
+	"wnby-default-fallback-location": "Bruker standardkoordinater som reserve.",
+	"wnby-invalid-coordinates-format": "Standard koordinatformat forventer en breddegrad, lengdegrad.",
+	"wnby-localcache-use": "Data ble hentet fra det lokale nettlesermellomlageret.",
+	"wnby-template-parameter-missing": "En påkrevd «querytemplate»-parameter mangler."
+}
