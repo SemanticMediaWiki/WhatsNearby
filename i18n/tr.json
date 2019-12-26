@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK"
+		]
+	},
+	"wnby-desc": "Şablonlara coğrafi konum algılama bilgileri sağlar",
+	"wnby-loading": "Yükleniyor ...",
+	"wnby-geolocation-disabled": "Coğrafi konum tespiti kullanıcı tarafından devre dışı bırakıldı.",
+	"wnby-geolocation-unsupported": "Coğrafi konum saptama bu tarayıcı tarafından desteklenmiyor.",
+	"wnby-geolocation-unknown-error": "Bilinmeyen bir hata oluştu.",
+	"wnby-geolocation-timeout-error": "Kullanıcı konumunu alma isteği zaman aşımına uğradı.",
+	"wnby-geolocation-position-unavailable": "Coğrafi konum bilgisi mevcut değil.",
+	"wnby-geolocation-permission-denied": "Kullanıcı Coğrafi Konum talebini reddetti.",
+	"wnby-geolocation-geoip-fallback": "Coğrafi konum koordinatları ($1, $2) harici bir [https://en.wikipedia.org/wiki/IP_address_location IP adresi konumu] hizmeti tarafından çözüldü.",
+	"wnby-geolocation-geoip-no-fallback": "Harici bir hizmetten Coğrafi Konum koordinatlarını ($1, $2) çözme denemesi başarısız oldu.",
+	"wnby-no-fallback-location": "Yedek konum mevcut değil.",
+	"wnby-default-fallback-location": "Varsayılan koordinatları yedek olarak kullanma.",
+	"wnby-invalid-coordinates-format": "Varsayılan koordinatlar biçimi enlem ve boylam bekliyor.",
+	"wnby-localcache-use": "Veriler yerel tarayıcı önbelleğinden alındı.",
+	"wnby-template-parameter-missing": "Gerekli bir \"querytemplate\" parametresi eksik."
+}
