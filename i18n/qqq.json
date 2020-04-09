@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"mwjames",
 			"Kghbln",
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"mwjames"
 		]
 	},
 	"wnby-desc": "{{desc|name=Whats Nearby|url=https://www.semantic-mediawiki.org/wiki/Extension:Whats_Nearby}}",
