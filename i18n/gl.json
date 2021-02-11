@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Elisardojm"
+			"Elisardojm",
+			"Maria zaos"
 		]
 	},
-	"wnby-desc": "Proporciona detección de xeolocalización ós modelos",
+	"wnby-desc": "Proporciona a detección de xeolocalización dos modelos",
 	"wnby-loading": "Cargando...",
 	"wnby-geolocation-disabled": "O usuario desactivou a detección por xeolocalización.",
 	"wnby-geolocation-unsupported": "Este navegador non admite a detección por xeolocalización.",
@@ -16,7 +17,7 @@
 	"wnby-geolocation-geoip-no-fallback": "Fallou un intento de obter as coordenadas de xeolocalización ($1,$2) desde un servizo externo.",
 	"wnby-no-fallback-location": "Non está dispoñible unha segunda localización.",
 	"wnby-default-fallback-location": "Usando as coordenadas por defecto como solución alternativa.",
-	"wnby-invalid-coordinates-format": "O formato das coordenadas por defecto esperan unha latitude e lonxitude.",
+	"wnby-invalid-coordinates-format": "O formato das coordenadas por defecto esixe unha combinación de latitude e lonxitude.",
 	"wnby-localcache-use": "Os datos recuperáronse da caché local do navegador.",
 	"wnby-template-parameter-missing": "Falta un parámetro de modelo (\"querytemplate\") obligatorio."
 }
