@@ -8,7 +8,7 @@
 		]
 	},
 	"wnby-desc": "Fournit les informations de détection par géolocalisation aux modèles",
-	"wnby-loading": "Chargement...",
+	"wnby-loading": "Chargement en cours...",
 	"wnby-geolocation-disabled": "La détection par géolocalisation a été désactivée par l'utilisateur.",
 	"wnby-geolocation-unsupported": "La détection par géolocalisation n’est pas prise en charge par ce navigateur.",
 	"wnby-geolocation-unknown-error": "Une erreur inconnue s’est produite.",
