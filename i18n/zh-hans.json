@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Stang"
 		]
 	},
 	"wnby-desc": "将地理位置检测信息提供给模板",
-	"wnby-loading": "正在载入...",
+	"wnby-loading": "正在加载...",
 	"wnby-geolocation-disabled": "地理位置检测已被用户禁用。",
 	"wnby-geolocation-unsupported": "地理位置检测不支持该浏览器。",
 	"wnby-geolocation-unknown-error": "发生未知错误。",
