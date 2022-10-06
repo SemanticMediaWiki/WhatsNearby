@@ -10,7 +10,7 @@
 	"wnby-geolocation-disabled": "האפשרות לאתר את המיקום בוטלה על־ידי המשתמש.",
 	"wnby-geolocation-unsupported": "זיהוי גאוגרפי אינו נתמך על־ידי דפדפן זה.",
 	"wnby-geolocation-unknown-error": "אירעה שגיאה לא ידועה.",
-	"wnby-geolocation-timeout-error": "זמן ההמתנה של הבקשה לאיתור מיקום המשתמש חלף.",
+	"wnby-geolocation-timeout-error": "זמן ההמתנה של הבקשה לאיתור מיקום המשתמש פג.",
 	"wnby-geolocation-position-unavailable": "מידע גאוגרפי לא זמין.",
 	"wnby-geolocation-permission-denied": "המשתמש דחה את הבקשה לאיתור המיקום.",
 	"wnby-geolocation-geoip-fallback": "נקודות ציון של מיקום גאוגרפי ($1, $2) תוקנו באמצעות שירות [https://en.wikipedia.org/wiki/IP_address_location מיקום כתובות IP] חיצוני.",

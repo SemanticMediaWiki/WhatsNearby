@@ -1,12 +1,24 @@
 {
 	"@metadata": {
 		"authors": [
+			"Geraki",
 			"NikosLikomitros",
 			"Nikosgranturismogt"
 		]
 	},
 	"wnby-desc": "Παρέχει πληροφορίες εντόπισης γεωτοποθεσίας σε πρότυπα",
 	"wnby-loading": "Φόρτωση...",
+	"wnby-geolocation-disabled": "Ο εντοπισμός γεωγραφικής θέσης απενεργοποιήθηκε από τον χρήστη.",
+	"wnby-geolocation-unsupported": "Ο εντοπισμός γεωγραφικής θέσης δεν υποστηρίζεται από αυτό το πρόγραμμα περιήγησης.",
 	"wnby-geolocation-unknown-error": "Προέκυψε ένα άγνωστο σφάλμα.",
-	"wnby-geolocation-position-unavailable": "Οι πληροφορίες γεωτοποθεσίας δεν είναι διαθέσιμες."
+	"wnby-geolocation-timeout-error": "Το αίτημα για λήψη τοποθεσίας χρήστη έληξε.",
+	"wnby-geolocation-position-unavailable": "Οι πληροφορίες γεωτοποθεσίας δεν είναι διαθέσιμες.",
+	"wnby-geolocation-permission-denied": "Ο χρήστης απέρριψε το αίτημα για γεωγραφική τοποθεσία.",
+	"wnby-geolocation-geoip-fallback": "Οι συντεταγμένες γεωεντοπισμού ($1, $2) επιλύθηκαν από μια εξωτερική υπηρεσία [https://en.wikipedia.org/wiki/IP_address_location τοποθεσία διεύθυνσης IP].",
+	"wnby-geolocation-geoip-no-fallback": "Μια προσπάθεια επίλυσης των συντεταγμένων γεωγραφικής τοποθεσίας ($1, $2) από μια εξωτερική υπηρεσία ήταν ανεπιτυχής.",
+	"wnby-no-fallback-location": "Δεν υπάρχει διαθέσιμη εναλλακτική τοποθεσία.",
+	"wnby-default-fallback-location": "Χρήση των προεπιλεγμένων συντεταγμένων ως εναλλακτική.",
+	"wnby-invalid-coordinates-format": "Η προεπιλεγμένη μορφή συντεταγμένων αναμένει γεωγραφικό πλάτος, γεωγραφικό μήκος.",
+	"wnby-localcache-use": "Τα δεδομένα ανακτήθηκαν από την τοπική προσωρινή μνήμη του προγράμματος περιήγησης.",
+	"wnby-template-parameter-missing": "Λείπει μια απαιτούμενη παράμετρος \"querytemplate\"."
 }
