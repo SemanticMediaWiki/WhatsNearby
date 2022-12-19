@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Elisardojm",
-			"Maria zaos"
+			"Maria zaos",
+			"Toliño"
 		]
 	},
 	"wnby-desc": "Proporciona a detección de xeolocalización dos modelos",
@@ -13,7 +14,7 @@
 	"wnby-geolocation-timeout-error": "O tempo para obter a localización do usuario expirou.",
 	"wnby-geolocation-position-unavailable": "Non está dispoñible a información de xeolocalización.",
 	"wnby-geolocation-permission-denied": "O usuario denegou a solicitude de xeolocalización.",
-	"wnby-geolocation-geoip-fallback": "As coordenadas xeográficas ($1, $2) foron obtidas por un servizo externo de [https://en.wikipedia.org/wiki/IP_address_location xeolocalización por dirección IP]",
+	"wnby-geolocation-geoip-fallback": "As coordenadas xeográficas ($1, $2) foron obtidas por un servizo externo de [https://en.wikipedia.org/wiki/IP_address_location xeolocalización por enderezo IP].",
 	"wnby-geolocation-geoip-no-fallback": "Fallou un intento de obter as coordenadas de xeolocalización ($1,$2) desde un servizo externo.",
 	"wnby-no-fallback-location": "Non está dispoñible unha segunda localización.",
 	"wnby-default-fallback-location": "Usando as coordenadas por defecto como solución alternativa.",
