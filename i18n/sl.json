@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"wnby-loading": "Nalaganje ...",
+	"wnby-geolocation-unknown-error": "Prišlo je do neznane napake.",
+	"wnby-default-fallback-location": "Uporaba prednastavljenih koordinat kot nadomestnih.",
+	"wnby-template-parameter-missing": "Manjka obvezni parameter »querytemplate«."
+}
