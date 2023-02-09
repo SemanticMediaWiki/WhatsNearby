@@ -9,7 +9,7 @@
 	"wnby-loading": "טוען ...",
 	"wnby-geolocation-disabled": "האפשרות לאתר את המיקום בוטלה על־ידי המשתמש.",
 	"wnby-geolocation-unsupported": "זיהוי גאוגרפי אינו נתמך על־ידי דפדפן זה.",
-	"wnby-geolocation-unknown-error": "אירעה שגיאה לא ידועה.",
+	"wnby-geolocation-unknown-error": "אירעה שגיאה בלתי־ידועה.",
 	"wnby-geolocation-timeout-error": "זמן ההמתנה של הבקשה לאיתור מיקום המשתמש פג.",
 	"wnby-geolocation-position-unavailable": "מידע גאוגרפי לא זמין.",
 	"wnby-geolocation-permission-denied": "המשתמש דחה את הבקשה לאיתור המיקום.",
