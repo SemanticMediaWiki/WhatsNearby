@@ -12,7 +12,7 @@
 	"wnby-geolocation-timeout-error": "Časovna omejitev zahtevka za pridobitev lokacije uporabnika je pretekla.",
 	"wnby-geolocation-position-unavailable": "Podatki o geolokaciji niso na voljo.",
 	"wnby-geolocation-permission-denied": "Uporabnik je zavrnil zahtevek za geolokacijo.",
-	"wnby-geolocation-geoip-fallback": "Geolokacijski koordinati ($1 , $2) je razrešila zunanja storitev [https://en.wikipedia.org/wiki/IP_address_location Lokacija IP-naslova].",
+	"wnby-geolocation-geoip-fallback": "Geolokacijski koordinati ($1 , $2) je razrešila zunanja storitev [https://en.wikipedia.org/wiki/Internet_geolocation Lokacija IP-naslova].",
 	"wnby-geolocation-geoip-no-fallback": "Poskus razrešitve geolokacijskih koordinat ($1, $2) z zunanjo storitvijo je spodletel.",
 	"wnby-no-fallback-location": "Nadomestna lokacija ni na voljo.",
 	"wnby-default-fallback-location": "Uporaba prednastavljenih koordinat kot nadomestnih.",
