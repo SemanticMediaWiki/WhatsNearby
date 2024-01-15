@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Alexandr Efremov",
-			"Okras"
+			"Okras",
+			"Pacha Tchernof"
 		]
 	},
 	"wnby-desc": "Добавляет информацию о позиционировании шаблонов",
-	"wnby-loading": "Загрузка …",
+	"wnby-loading": "Загружается …",
 	"wnby-geolocation-disabled": "Автоматическое позиционирование отключено пользователем.",
 	"wnby-geolocation-unsupported": "Автоматическое позиционирование не поддерживается этим браузером.",
 	"wnby-geolocation-unknown-error": "Произошла неизвестная ошибка.",
