@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mainframe98",
+			"McDutchie",
+			"Sjoerddebruin"
+		]
+	},
+	"wnby-desc": "Stelt informatie over geolocatie-detectie aan sjablonen ter beschikking",
+	"wnby-loading": "Laden ...",
+	"wnby-geolocation-disabled": "Geolocatie-detectie is door de gebruiker uitgeschakeld.",
+	"wnby-geolocation-unsupported": "Geolocatie-detectie wordt niet ondersteund door deze browser.",
+	"wnby-geolocation-unknown-error": "Er is een onbekende fout opgetreden.",
+	"wnby-geolocation-timeout-error": "Bij het opvragen van de gebruikerslocatie is de maximumtijd verstreken.",
+	"wnby-geolocation-position-unavailable": "Er is geen geolocatie-informatie beschikbaar.",
+	"wnby-geolocation-permission-denied": "De gebruiker heeft het verzoek om geolocatie afgewezen.",
+	"wnby-geolocation-geoip-fallback": "De geolocatie-coördinaten ($1, $2) zijn herleid door een externe [https://nl.wikipedia.org/wiki/Geolocatiesoftware IP-adreslocatie]-dienst.",
+	"wnby-geolocation-geoip-no-fallback": "Een poging om de geolocatie-coördinaten ($1, $2) door een externe dienst te laten herleiden, is mislukt.",
+	"wnby-no-fallback-location": "Er is geen terugval-locatie beschikbaar.",
+	"wnby-default-fallback-location": "Er wordt teruggevallen op de vooraf ingestelde coördinaten.",
+	"wnby-invalid-coordinates-format": "De verwachte indeling van de coördinaten is: breedtegraad, lengtegraad.",
+	"wnby-localcache-use": "De gegevens zijn opgehaald uit de lokale browsercache.",
+	"wnby-template-parameter-missing": "Er ontbreekt een vereiste parameter “querytemplate”."
+}
