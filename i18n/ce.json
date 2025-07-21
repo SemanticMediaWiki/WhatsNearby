@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Умар"
+		]
+	},
+	"wnby-desc": "Кепийн геолокацех лаьцна информаци тӀетоху",
+	"wnby-loading": "Чуйолуш йу…",
+	"wnby-geolocation-disabled": "Авто геолокаци декъашхочо дӀайайина.",
+	"wnby-geolocation-unsupported": "Авто геолокаци хӀокху браузеро ловш йац."
+}
