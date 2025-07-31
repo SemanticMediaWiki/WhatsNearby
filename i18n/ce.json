@@ -7,5 +7,14 @@
 	"wnby-desc": "Кепийн геолокацех лаьцна информаци тӀетоху",
 	"wnby-loading": "Чуйолуш йу…",
 	"wnby-geolocation-disabled": "Авто геолокаци декъашхочо дӀайайина.",
-	"wnby-geolocation-unsupported": "Авто геолокаци хӀокху браузеро ловш йац."
+	"wnby-geolocation-unsupported": "Авто геолокаци хӀокху браузеро ловш йац.",
+	"wnby-geolocation-unknown-error": "Цадевза гӀалат даьлла.",
+	"wnby-geolocation-timeout-error": "Декъашхо лаьтта меттиг схьаэца хан чекхйаьлла.",
+	"wnby-geolocation-position-unavailable": "Геолокацин информаци йац.",
+	"wnby-geolocation-permission-denied": "Декъашхочо тӀе ца дитина Геолокаци йеха дехар.",
+	"wnby-geolocation-geoip-fallback": "Геолокацин координаташ ($1, $2) билгалдаьхна арахьара [https://en.wikipedia.org/wiki/IP_address_location IP-адресан геоиндекацин] сервисо.",
+	"wnby-geolocation-geoip-no-fallback": "Арахьарчу сервисера координаташ ($1, $2) схьаэца гӀортар ца хилира.",
+	"wnby-no-fallback-location": "Фоллбек позици йац лелош.",
+	"wnby-default-fallback-location": "Леладе хьалхара координаташ фолбек-позицин.",
+	"wnby-invalid-coordinates-format": "Стандартан координатийн формат: шоралла, дохалла."
 }
