@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"شاه زمان پټان"
+		]
+	},
+	"wnby-desc": "کينډيو ته د ځمکځي موندلو مالومات چمتو کوي",
+	"wnby-loading": "رابرسېرېږي...",
+	"wnby-geolocation-disabled": "ځمکځي موندنه کارن له خوا ناچارن‌شوې.",
+	"wnby-geolocation-unsupported": "په دې ښوونگر کې ځمکځي موندنه نه ملاتړ کېږي.",
+	"wnby-geolocation-unknown-error": "يوه ناڅرگنده تېروتنه رامنځته شوه.",
+	"wnby-geolocation-timeout-error": "د کارن ځای ترلاسه کولو غوښتنه وځنډېده.",
+	"wnby-geolocation-position-unavailable": "ځمکځي مالومات د لاسرسي وړ نه دي.",
+	"wnby-geolocation-permission-denied": "کارن د ځمکځي غوښتنه ناگاره کړه.",
+	"wnby-geolocation-geoip-fallback": "د ځمکځي همغږي ($1،$2) د باندني  [https://en.wikipedia.org/wiki/IP_address_location وېبپتې ځي] چوپړ له خوا اواره شوه.",
+	"wnby-geolocation-geoip-no-fallback": "د باندني چوپړ څخه ډ ځمکځي همغږي ($1، $2) اوارؤلو هڅه ناکامه شوه.",
+	"wnby-no-fallback-location": "هېڅ وتل ځی د لاسرسي وړ نه دی.",
+	"wnby-default-fallback-location": "د بېرته راوتلو په توگه تلواله همغږي کارول.",
+	"wnby-invalid-coordinates-format": "تلواله همغږيو بڼه د اوږدوالي، لنډوالي تمه لري.",
+	"wnby-localcache-use": "د ځايي ښوونگر له نيونگې اومتوکي ترلاسه شول.",
+	"wnby-template-parameter-missing": "اړينه \"تپوس‌کينډۍ\" پاراميتر ورک دی."
+}

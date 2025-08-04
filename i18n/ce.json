@@ -16,5 +16,7 @@
 	"wnby-geolocation-geoip-no-fallback": "Арахьарчу сервисера координаташ ($1, $2) схьаэца гӀортар ца хилира.",
 	"wnby-no-fallback-location": "Фоллбек позици йац лелош.",
 	"wnby-default-fallback-location": "Леладе хьалхара координаташ фолбек-позицин.",
-	"wnby-invalid-coordinates-format": "Стандартан координатийн формат: шоралла, дохалла."
+	"wnby-invalid-coordinates-format": "Стандартан координатийн формат: шоралла, дохалла.",
+	"wnby-localcache-use": "Браузеран локалан буферера схьаэцна хаамаш.",
+	"wnby-template-parameter-missing": "Оьшуш йолу «querytemplate» параметр йац."
 }
